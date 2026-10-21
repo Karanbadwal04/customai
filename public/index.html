@@ -1,309 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarvam AI Voice Caller Studio | Real-Time Telephony & Latency Tracker</title>
-  <meta name="description" content="Ultra-low latency conversational AI phone calling platform powered by Sarvam AI and Twilio with real-time latency analytics and transcript storage.">
+  <title>Voice Studio | Telephony &amp; Latency Console</title>
+  <meta name="description"
+    content="Ultra-low latency conversational voice calling platform with real-time turn latency telemetry and audio session transcripts.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- Ambient Background Glows -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-glow glow-3"></div>
 
-  <!-- Main Container -->
-  <div class="app-container">
-    
-    <!-- Header -->
+<body>
+  <!-- App Shell -->
+  <div class="app-shell">
+
+    <!-- Top Bar Navigation -->
     <header class="app-header">
-      <div class="header-brand">
-        <div class="brand-logo">
-          <span class="logo-icon">🇮🇳</span>
-          <div class="logo-pulse"></div>
+      <div class="header-left">
+        <div class="brand">
+          <div class="brand-mark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Voice Studio</span>
+            <span class="brand-sub">Real-Time Telephony Console</span>
+          </div>
         </div>
-        <div class="brand-info">
-          <h1>Sarvam Voice Studio <span class="badge-tag">Sarvam-105B</span></h1>
-          <p>Real-Time Multilingual AI Phone Caller &amp; Latency Analytics</p>
-        </div>
+
+        <nav class="nav-tabs">
+          <button class="nav-tab active" id="tabStudioBtn" data-target="studioView">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" x2="12" y1="19" y2="22"></line>
+            </svg>
+            <span>Live Console</span>
+          </button>
+          <button class="nav-tab" id="tabHistoryBtn" data-target="historyView">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Call Transcripts</span>
+            <span class="tab-badge" id="transcriptCountBadge">0</span>
+          </button>
+          <button class="nav-tab" id="tabAnalyticsBtn" data-target="analyticsView">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10"></path>
+              <path d="M12 20V4"></path>
+              <path d="M6 20v-6"></path>
+            </svg>
+            <span>Telemetry</span>
+          </button>
+        </nav>
       </div>
 
-      <div class="header-pills">
-        <div class="status-pill online" id="wsStatusPill">
-          <span class="pill-dot"></span>
-          <span id="wsStatusText">Live Socket Connected</span>
+      <div class="header-right">
+        <div class="connection-status" id="wsStatusPill">
+          <span class="status-indicator"></span>
+          <span class="status-label" id="wsStatusText">Socket Connected</span>
         </div>
-        <div class="status-pill model-pill">
-          <span class="pill-label">Model:</span>
-          <span class="pill-value" id="headerModelName">sarvam-105b</span>
+        <div class="model-badge">
+          <span class="model-badge-label">Engine</span>
+          <span class="model-badge-value font-mono" id="headerModelName">sarvam-105b</span>
         </div>
-        <button class="btn-icon" id="openSettingsBtn" title="Studio Settings">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button class="btn-icon" id="openSettingsBtn" title="Studio Settings" aria-label="Open settings">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="3"></circle>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
           </svg>
         </button>
       </div>
     </header>
 
-    <!-- Navigation Tabs -->
-    <nav class="studio-nav">
-      <button class="nav-tab active" id="tabStudioBtn" data-target="studioView">
-        <span class="tab-icon">🎙️</span> Live Studio &amp; Latency
-      </button>
-      <button class="nav-tab" id="tabHistoryBtn" data-target="historyView">
-        <span class="tab-icon">📜</span> Saved Call Transcripts
-        <span class="tab-badge" id="transcriptCountBadge">0</span>
-      </button>
-      <button class="nav-tab" id="tabAnalyticsBtn" data-target="analyticsView">
-        <span class="tab-icon">📊</span> Latency Benchmarks
-      </button>
-    </nav>
+    <!-- Content Workspace -->
+    <main class="app-main">
 
-    <!-- Main Views Container -->
-    <main class="views-wrapper">
-      
-      <!-- VIEW 1: LIVE STUDIO -->
+      <!-- VIEW 1: LIVE CONSOLE -->
       <section class="view-panel active" id="studioView">
-        <div class="studio-grid">
-          
-          <!-- LEFT CARD: Dialer & Configuration -->
-          <div class="glass-card dialer-card">
-            <div class="card-header">
-              <h2>📞 Outbound Call Setup</h2>
-              <span class="badge-status" id="callStatusBadge">IDLE</span>
+        <div class="studio-layout">
+
+          <!-- PANEL LEFT: Dialer & Session Control -->
+          <div class="panel dialer-panel">
+            <div class="panel-header">
+              <div class="panel-title-group">
+                <h3>Call Dispatcher</h3>
+                <span class="status-badge" id="callStatusBadge">IDLE</span>
+              </div>
             </div>
 
-            <form id="dialerForm" class="dialer-form">
-              <div class="form-group">
-                <label for="inputFriendNumber">Destination Phone Number (E.164)</label>
-                <div class="input-with-icon">
-                  <span class="field-icon">📱</span>
-                  <input type="text" id="inputFriendNumber" required placeholder="+919465802410" value="+919465802410">
+            <form id="dialerForm" class="panel-form">
+              <div class="form-field">
+                <label for="inputFriendNumber">Destination Number</label>
+                <div class="input-container">
+                  <span class="input-prefix">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </span>
+                  <input type="tel" id="inputFriendNumber" required placeholder="+919465802410" value="+919465802410"
+                    class="font-mono">
                 </div>
-                <small class="field-hint">Include country code (e.g. +91 for India)</small>
+                <span class="field-hint">International E.164 format with country code</span>
               </div>
 
               <div class="form-row">
-                <div class="form-group col-half">
+                <div class="form-field col-half">
                   <label for="selectLanguage">Language</label>
-                  <select id="selectLanguage">
-                    <option value="en-IN" selected>English (India) [en-IN]</option>
-                    <option value="hi-IN">Hindi [hi-IN]</option>
-                    <option value="pa-IN">Punjabi [pa-IN]</option>
-                    <option value="bn-IN">Bengali [bn-IN]</option>
-                    <option value="ta-IN">Tamil [ta-IN]</option>
-                    <option value="te-IN">Telugu [te-IN]</option>
-                    <option value="mr-IN">Marathi [mr-IN]</option>
-                    <option value="gu-IN">Gujarati [gu-IN]</option>
-                  </select>
+                  <div class="select-container">
+                    <select id="selectLanguage">
+                      <option value="en-IN" selected>English (India)</option>
+                      <option value="hi-IN">Hindi (hi-IN)</option>
+                      <option value="pa-IN">Punjabi (pa-IN)</option>
+                      <option value="bn-IN">Bengali (bn-IN)</option>
+                      <option value="ta-IN">Tamil (ta-IN)</option>
+                      <option value="te-IN">Telugu (te-IN)</option>
+                      <option value="mr-IN">Marathi (mr-IN)</option>
+                      <option value="gu-IN">Gujarati (gu-IN)</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="form-group col-half">
-                  <label for="selectSpeaker">Bulbul Voice</label>
-                  <select id="selectSpeaker">
-                    <option value="shubh" selected>Shubh (Male - Natural)</option>
-                    <option value="simran">Simran (Female - Warm)</option>
-                    <option value="ishita">Ishita (Female - Expressive)</option>
-                    <option value="aditya">Aditya (Male - Energetic)</option>
-                    <option value="priya">Priya (Female - Friendly)</option>
+                <div class="form-field col-half">
+                  <label for="selectSpeaker">Voice Persona</label>
+                  <div class="select-container">
+                    <select id="selectSpeaker">
+                      <option value="shubh" selected>Shubh (Natural Male)</option>
+                      <option value="simran">Simran (Warm Female)</option>
+                      <option value="ishita">Ishita (Expressive Female)</option>
+                      <option value="aditya">Aditya (Dynamic Male)</option>
+                      <option value="priya">Priya (Clear Female)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="selectPromptPreset">Conversation Scenario</label>
+                <div class="select-container">
+                  <select id="selectPromptPreset">
+                    <option value="doctor" selected>Diya | Career Plan B (Doctor NEET PG)</option>
+                    <option value="casual">Casual Catch-up &amp; Friendly Greeting</option>
+                    <option value="dinner">Dinner / Weekend Hangout Plan</option>
+                    <option value="birthday">Surprise Birthday Wishes</option>
+                    <option value="assistant">Personal Assistant Sync</option>
+                    <option value="custom">Custom System Instructions</option>
                   </select>
                 </div>
               </div>
 
-              <div class="form-group">
-                <label for="selectPromptPreset">Call Scenario Preset</label>
-                <select id="selectPromptPreset">
-                  <option value="casual" selected>☕ Casual Catch-up &amp; Friendly Greeting</option>
-                  <option value="dinner">🍕 Dinner / Weekend Hangout Plan</option>
-                  <option value="birthday">🎂 Surprise Birthday Wishes</option>
-                  <option value="assistant">💼 Personal Assistant / Schedule Check</option>
-                  <option value="custom">✏️ Custom Persona Prompt</option>
-                </select>
+              <div class="form-field">
+                <label for="inputGreeting">Opening Greeting (First message AI speaks)</label>
+                <input type="text" id="inputGreeting" value="Hello, kya meri baat Doctor se ho rahi hai?" placeholder="Hello, kya meri baat Doctor se ho rahi hai?">
               </div>
 
-              <div class="form-group" id="customPromptGroup" style="display: none;">
-                <label for="inputCustomPrompt">Custom System Instructions</label>
-                <textarea id="inputCustomPrompt" rows="3" placeholder="Tell Sarvam AI who it is and what to discuss..."></textarea>
+              <div class="form-field" id="customPromptGroup" style="display: none;">
+                <label for="inputCustomPrompt">System Instructions</label>
+                <textarea id="inputCustomPrompt" rows="3"
+                  placeholder="Define behavior, conversation context, and character guidelines..."></textarea>
               </div>
 
-              <!-- Action Call Buttons -->
-              <div class="dialer-actions">
-                <button type="submit" class="btn-primary call-btn" id="startCallBtn">
-                  <span class="btn-icon">📞</span>
-                  <span class="btn-text">Dial Outbound Call</span>
+              <div class="panel-actions">
+                <button type="submit" class="btn btn-primary" id="startCallBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                  <span class="btn-text">Initiate Call</span>
                 </button>
-                <button type="button" class="btn-danger hangup-btn" id="hangupCallBtn" style="display: none;">
-                  <span class="btn-icon">🔴</span>
-                  <span class="btn-text">Hang Up Call</span>
+                <button type="button" class="btn btn-danger" id="hangupCallBtn" style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91">
+                    </path>
+                    <line x1="22" x2="2" y1="2" y2="22"></line>
+                  </svg>
+                  <span class="btn-text">Disconnect Call</span>
                 </button>
               </div>
             </form>
 
-            <!-- Call Info Metadata -->
-            <div class="call-metadata-box" id="callMetaBox">
-              <div class="meta-item">
-                <span class="meta-label">Caller SID:</span>
+            <!-- Telephony Metadata Strip -->
+            <div class="metadata-strip" id="callMetaBox">
+              <div class="meta-row">
+                <span class="meta-title">Call SID</span>
                 <span class="meta-value font-mono" id="metaCallSid">None</span>
               </div>
-              <div class="meta-item">
-                <span class="meta-label">From Twilio:</span>
+              <div class="meta-row">
+                <span class="meta-title">Caller ID</span>
                 <span class="meta-value font-mono" id="metaTwilioNumber">+17372508034</span>
               </div>
-              <div class="meta-item">
-                <span class="meta-label">Call Duration:</span>
+              <div class="meta-row">
+                <span class="meta-title">Active Duration</span>
                 <span class="meta-value font-mono" id="callDurationTimer">00:00</span>
               </div>
             </div>
           </div>
 
-          <!-- CENTER CARD: Live Conversation & Audio Transcripts -->
-          <div class="glass-card live-transcript-card">
-            <div class="card-header">
-              <div class="header-title-wrap">
-                <h2>💬 Live Conversation Stream</h2>
-                <span class="call-status-indicator" id="liveTurnIndicator">
-                  <span class="status-indicator-dot"></span>
-                  <span id="liveTurnText">Waiting for call...</span>
-                </span>
+          <!-- PANEL CENTER: Live Stream & Audio -->
+          <div class="panel stream-panel">
+            <div class="panel-header">
+              <div class="stream-status">
+                <div class="live-pulse" id="liveTurnIndicator">
+                  <span class="pulse-point"></span>
+                </div>
+                <div>
+                  <h3>Live Audio Stream</h3>
+                  <span class="stream-subtitle" id="liveTurnText">Standby • Ready for incoming turns</span>
+                </div>
               </div>
-              <div class="transcript-actions">
-                <button class="btn-sm btn-ghost" id="clearChatBtn" title="Clear view">Clear View</button>
-                <button class="btn-sm btn-ghost" id="exportChatBtn" title="Download Transcript">Export TXT</button>
+              <div class="stream-toolbar">
+                <button class="btn btn-secondary btn-sm" id="clearChatBtn"
+                  title="Clear conversation view">Clear</button>
+                <button class="btn btn-secondary btn-sm" id="exportChatBtn" title="Download as text file">Export
+                  TXT</button>
               </div>
             </div>
 
-            <!-- Conversation Bubbles Container -->
-            <div class="transcript-scroll-area" id="transcriptContainer">
+            <div class="transcript-viewport" id="transcriptContainer">
               <div class="empty-state" id="emptyTranscriptState">
-                <div class="empty-icon">🎧</div>
-                <h3>Ready to stream conversation</h3>
-                <p>When your friend answers, the live transcript with turn-by-turn latency metrics and audio replays will appear here in real-time.</p>
+                <div class="empty-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" x2="12" y1="19" y2="22"></line>
+                  </svg>
+                </div>
+                <h4>Awaiting call connection</h4>
+                <p>Spoken utterances from the caller and generated voice responses with exact response latencies will
+                  render here in real-time.</p>
               </div>
             </div>
 
-            <!-- Speaking Wave Visualizer -->
-            <div class="audio-wave-bar" id="audioWaveBar">
-              <span class="wave-label" id="waveSpeakerLabel">Voice Activity</span>
-              <div class="bars-container">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            <!-- Voice Activity Equalizer -->
+            <div class="voice-activity-strip" id="audioWaveBar">
+              <span class="activity-label" id="waveSpeakerLabel">Voice Activity</span>
+              <div class="equalizer-bars">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
               </div>
             </div>
           </div>
 
-          <!-- RIGHT CARD: Real-Time Latency Meter -->
-          <div class="glass-card latency-card">
-            <div class="card-header">
-              <h2>⚡ Latency Meter</h2>
-              <span class="subsecond-badge" id="subsecondBadge">Sub-Second Target</span>
+          <!-- PANEL RIGHT: Telemetry & Latency -->
+          <div class="panel telemetry-panel">
+            <div class="panel-header">
+              <div>
+                <h3>Turn Telemetry</h3>
+                <span class="telemetry-sub">End-to-End Latency Profile</span>
+              </div>
+              <span class="target-badge" id="subsecondBadge">Target: &lt;1000ms</span>
             </div>
 
-            <!-- Speedometer / Gauge -->
-            <div class="gauge-section">
-              <div class="gauge-meter-wrapper">
+            <!-- Gauge / Meter Card -->
+            <div class="telemetry-hero">
+              <div class="gauge-display">
                 <svg class="gauge-svg" viewBox="0 0 200 120">
-                  <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100" />
-                  <path class="gauge-fill" id="gaugePath" d="M 20 100 A 80 80 0 0 1 180 100" />
+                  <path class="gauge-track" d="M 25 105 A 75 75 0 0 1 175 105" />
+                  <path class="gauge-value" id="gaugePath" d="M 25 105 A 75 75 0 0 1 175 105" />
                 </svg>
-                <div class="gauge-center-content">
-                  <span class="gauge-number font-mono" id="currentLatencyNumber">0</span>
-                  <span class="gauge-unit">ms</span>
+                <div class="gauge-readout">
+                  <span class="readout-number font-mono" id="currentLatencyNumber">0</span>
+                  <span class="readout-unit">ms</span>
                 </div>
               </div>
-              <div class="gauge-rating" id="latencyRatingText">Waiting for speech turn</div>
+              <div class="telemetry-classification" id="latencyRatingText">Awaiting turn cycle</div>
             </div>
 
-            <!-- Latency Waterfall Breakdown -->
-            <div class="latency-breakdown-box">
-              <h3>Turn Latency Breakdown</h3>
-              
-              <div class="breakdown-row">
-                <div class="breakdown-info">
-                  <span class="dot dot-chat"></span>
-                  <span class="label">Sarvam-105B Reasoning:</span>
-                </div>
-                <span class="val font-mono" id="breakdownChatMs">0 ms</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-bar bar-chat" id="barChat" style="width: 0%;"></div>
+            <!-- Waterfall Latency Breakdown -->
+            <div class="waterfall-section">
+              <div class="waterfall-header">
+                <h4>Component Breakdown</h4>
               </div>
 
-              <div class="breakdown-row">
-                <div class="breakdown-info">
-                  <span class="dot dot-tts"></span>
-                  <span class="label">Bulbul Voice Synthesis:</span>
+              <div class="waterfall-item">
+                <div class="item-header">
+                  <div class="item-tag">
+                    <span class="legend-color legend-chat"></span>
+                    <span>Sarvam-105B Reasoning</span>
+                  </div>
+                  <span class="item-ms font-mono" id="breakdownChatMs">0 ms</span>
                 </div>
-                <span class="val font-mono" id="breakdownTtsMs">0 ms</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-bar bar-tts" id="barTts" style="width: 0%;"></div>
+                <div class="track-bar">
+                  <div class="bar-fill fill-chat" id="barChat" style="width: 0%;"></div>
+                </div>
               </div>
 
-              <div class="breakdown-row total-row">
-                <div class="breakdown-info">
-                  <span class="dot dot-total"></span>
-                  <span class="label">Total Response Time:</span>
+              <div class="waterfall-item">
+                <div class="item-header">
+                  <div class="item-tag">
+                    <span class="legend-color legend-tts"></span>
+                    <span>Bulbul Voice Synthesis</span>
+                  </div>
+                  <span class="item-ms font-mono" id="breakdownTtsMs">0 ms</span>
                 </div>
-                <span class="val font-mono highlight" id="breakdownTotalMs">0 ms</span>
+                <div class="track-bar">
+                  <div class="bar-fill fill-tts" id="barTts" style="width: 0%;"></div>
+                </div>
               </div>
-            </div>
 
-            <!-- Live Session Stats -->
-            <div class="quick-stats-grid">
-              <div class="stat-card">
-                <span class="stat-num font-mono" id="avgLatencyStat">0 ms</span>
-                <span class="stat-title">Avg Latency</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num font-mono" id="turnCountStat">0</span>
-                <span class="stat-title">Turns Count</span>
+              <div class="waterfall-total">
+                <div class="total-label">
+                  <span class="legend-color legend-total"></span>
+                  <span>Total Turn Latency</span>
+                </div>
+                <span class="total-ms font-mono" id="breakdownTotalMs">0 ms</span>
               </div>
             </div>
 
+            <!-- Session Metrics -->
+            <div class="session-metrics-grid">
+              <div class="metric-tile">
+                <span class="metric-data font-mono" id="avgLatencyStat">0 ms</span>
+                <span class="metric-caption">Average Latency</span>
+              </div>
+              <div class="metric-tile">
+                <span class="metric-data font-mono" id="turnCountStat">0</span>
+                <span class="metric-caption">Processed Turns</span>
+              </div>
+            </div>
           </div>
 
         </div>
       </section>
 
-      <!-- VIEW 2: CALL HISTORY & TRANSCRIPTS -->
+      <!-- VIEW 2: SAVED CALL TRANSCRIPTS -->
       <section class="view-panel" id="historyView">
-        <div class="history-grid">
-          
-          <!-- History Call List -->
-          <div class="glass-card history-sidebar-card">
-            <div class="card-header">
-              <h2>🗂️ Recorded Calls</h2>
-              <button class="btn-sm btn-ghost" id="refreshHistoryBtn">Refresh</button>
+        <div class="history-layout">
+
+          <div class="panel history-sidebar">
+            <div class="panel-header">
+              <h3>Recorded Sessions</h3>
+              <button class="btn btn-secondary btn-sm" id="refreshHistoryBtn">Refresh</button>
             </div>
-            <div class="history-list" id="historyCallsList">
+            <div class="history-items-list" id="historyCallsList">
               <!-- Dynamically populated -->
             </div>
           </div>
 
-          <!-- History Call Detail -->
-          <div class="glass-card history-detail-card">
-            <div class="card-header">
+          <div class="panel history-content">
+            <div class="panel-header">
               <div>
-                <h2 id="detailCallTitle">Call Details</h2>
-                <p class="subtitle" id="detailCallSubtitle">Select a call from the left to view the transcript and replay audio</p>
+                <h3 id="detailCallTitle">Session Details</h3>
+                <span class="stream-subtitle" id="detailCallSubtitle">Select a completed call from the left to inspect
+                  transcripts and audio playback.</span>
               </div>
-              <div class="detail-actions" id="detailActions" style="display: none;">
-                <button class="btn-sm btn-ghost" id="downloadTranscriptBtn">Export JSON</button>
-                <button class="btn-sm btn-danger" id="deleteTranscriptBtn">Delete Call</button>
+              <div class="history-action-group" id="detailActions" style="display: none;">
+                <button class="btn btn-secondary btn-sm" id="downloadTranscriptBtn">Export JSON</button>
+                <button class="btn btn-danger btn-sm" id="deleteTranscriptBtn">Delete</button>
               </div>
             </div>
 
-            <div class="detail-content" id="detailContent">
+            <div class="detail-body" id="detailContent">
               <div class="empty-state">
-                <div class="empty-icon">📖</div>
-                <h3>No call selected</h3>
-                <p>Choose any previous conversation to review speaker turns, response latencies, and replay generated voices.</p>
+                <div class="empty-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" x2="8" y1="13" y2="13"></line>
+                    <line x1="16" x2="8" y1="17" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <h4>No session selected</h4>
+                <p>Pick a previous phone conversation to inspect audio, speaker turns, and latency logs.</p>
               </div>
             </div>
           </div>
@@ -311,65 +400,113 @@
         </div>
       </section>
 
-      <!-- VIEW 3: LATENCY BENCHMARKS -->
+      <!-- VIEW 3: BENCHMARKS & TELEMETRY -->
       <section class="view-panel" id="analyticsView">
-        <div class="analytics-container">
-          
-          <div class="glass-card analytics-summary-card">
-            <h2>📈 Platform Benchmarks &amp; Efficiency</h2>
-            <p>Real-time telecommunication latency metrics across Sarvam AI voice turns.</p>
-            
-            <div class="bench-cards-grid">
-              <div class="bench-metric-card">
-                <span class="metric-icon">⚡</span>
-                <div class="metric-body">
-                  <span class="metric-num font-mono" id="benchFastestTurn">~640 ms</span>
-                  <span class="metric-name">Fastest Turn Recorded</span>
+        <div class="analytics-layout">
+
+          <div class="panel analytics-summary">
+            <div class="panel-header">
+              <div>
+                <h3>Platform Efficiency &amp; Benchmarks</h3>
+                <span class="stream-subtitle">System performance statistics and conversational latency metrics</span>
+              </div>
+            </div>
+
+            <div class="benchmark-grid">
+              <div class="bench-tile">
+                <div class="bench-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="bench-info">
+                  <span class="bench-value font-mono" id="benchFastestTurn">~640 ms</span>
+                  <span class="bench-label">Peak Low Turn Latency</span>
                 </div>
               </div>
-              <div class="bench-metric-card">
-                <span class="metric-icon">🧠</span>
-                <div class="metric-body">
-                  <span class="metric-num font-mono" id="benchAvgChat">~450 ms</span>
-                  <span class="metric-name">Avg Sarvam-105B Reasoning</span>
+
+              <div class="bench-tile">
+                <div class="bench-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" x2="16" y1="21" y2="21"></line>
+                    <line x1="12" x2="12" y1="17" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="bench-info">
+                  <span class="bench-value font-mono" id="benchAvgChat">~450 ms</span>
+                  <span class="bench-label">Sarvam-105B Inference (Avg)</span>
                 </div>
               </div>
-              <div class="bench-metric-card">
-                <span class="metric-icon">🗣️</span>
-                <div class="metric-body">
-                  <span class="metric-num font-mono" id="benchAvgTts">~250 ms</span>
-                  <span class="metric-name">Avg Bulbul TTS Generation</span>
+
+              <div class="bench-tile">
+                <div class="bench-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                  </svg>
+                </div>
+                <div class="bench-info">
+                  <span class="bench-value font-mono" id="benchAvgTts">~250 ms</span>
+                  <span class="bench-label">Bulbul TTS Synthesis (Avg)</span>
                 </div>
               </div>
-              <div class="bench-metric-card">
-                <span class="metric-icon">🏆</span>
-                <div class="metric-body">
-                  <span class="metric-num font-mono">100%</span>
-                  <span class="metric-name">Twilio Trial Compatibility</span>
+
+              <div class="bench-tile">
+                <div class="bench-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="bench-info">
+                  <span class="bench-value font-mono">100%</span>
+                  <span class="bench-label">Twilio Webhook SLA Compliance</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="glass-card pipeline-explanation-card">
-            <h3>Why Sarvam Voice AI Delivers Natural Indian Conversations</h3>
+          <div class="panel pipeline-panel">
+            <div class="panel-header">
+              <h3>Telephony Pipeline Architecture</h3>
+            </div>
             <div class="pipeline-flow">
-              <div class="flow-step">
-                <div class="step-num">1</div>
-                <h4>Indian Accents &amp; Hinglish</h4>
-                <p>Saaras speech recognition accurately decodes mixed Hindi-English, Punjabi, and regional dialect phonemes.</p>
+              <div class="flow-card">
+                <div class="flow-step-num">01</div>
+                <h4>Indian Phoneme ASR</h4>
+                <p>Saaras speech recognition model accurately parses mixed Hinglish, colloquial idioms, and Indian
+                  accent phonetics over PSTN telephony.</p>
               </div>
-              <div class="flow-arrow">➔</div>
-              <div class="flow-step">
-                <div class="step-num">2</div>
+              <div class="flow-divider">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" x2="19" y1="12" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+              <div class="flow-card">
+                <div class="flow-step-num">02</div>
                 <h4>Sarvam-105B Reasoning</h4>
-                <p>Tuned specifically on Indian context, conversational nuance, and culturally aware banter.</p>
+                <p>High-speed reasoning model tailored for natural turn-taking, concise response length, and culturally
+                  resonant conversation pacing.</p>
               </div>
-              <div class="flow-arrow">➔</div>
-              <div class="flow-step">
-                <div class="step-num">3</div>
-                <h4>Bulbul v4 Expressive TTS</h4>
-                <p>Synthesizes human-grade natural prosody with zero robotic artifacting in ~200ms.</p>
+              <div class="flow-divider">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" x2="19" y1="12" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+              <div class="flow-card">
+                <div class="flow-step-num">03</div>
+                <h4>Bulbul v4 Synthesis</h4>
+                <p>Generates high-fidelity Indian voice prosody in ~200ms, streaming natural speech without synthetic
+                  robotic artifacts.</p>
               </div>
             </div>
           </div>
@@ -381,31 +518,41 @@
 
     <!-- SETTINGS MODAL -->
     <div class="modal-backdrop" id="settingsModal" style="display: none;">
-      <div class="modal-window glass-card">
+      <div class="modal-card">
         <div class="modal-header">
-          <h3>⚙️ Platform &amp; Telephony Settings</h3>
-          <button class="btn-close" id="closeSettingsBtn">&times;</button>
+          <div class="modal-title-group">
+            <h3>Telephony Configuration</h3>
+            <span class="stream-subtitle">Runtime endpoints and credential parameters</span>
+          </div>
+          <button class="btn-icon" id="closeSettingsBtn" aria-label="Close dialog">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" x2="6" y1="6" y2="18"></line>
+              <line x1="6" x2="18" y1="6" y2="18"></line>
+            </svg>
+          </button>
         </div>
-        <form id="settingsForm" class="modal-body">
-          <div class="form-group">
-            <label for="settingPublicUrl">Public Base URL (Cloudflare Tunnel / ngrok)</label>
-            <input type="text" id="settingPublicUrl" placeholder="https://xxxx.trycloudflare.com">
+        <form id="settingsForm" class="modal-form">
+          <div class="form-field">
+            <label for="settingPublicUrl">Public Webhook URL (Cloudflare Tunnel)</label>
+            <input type="url" id="settingPublicUrl" placeholder="https://xxxx.trycloudflare.com" class="font-mono">
+            <span class="field-hint">Twilio reaches this public base URL for /twiml and /voice/respond</span>
           </div>
-          <div class="form-group">
-            <label for="settingFriendNumber">Default Friend Phone Number</label>
-            <input type="text" id="settingFriendNumber" placeholder="+919465802410">
+          <div class="form-field">
+            <label for="settingFriendNumber">Default Destination Number</label>
+            <input type="tel" id="settingFriendNumber" placeholder="+919465802410" class="font-mono">
           </div>
-          <div class="form-group">
-            <label for="settingTwilioFrom">Twilio Caller ID Phone Number</label>
-            <input type="text" id="settingTwilioFrom" readonly class="readonly-input">
+          <div class="form-field">
+            <label for="settingTwilioFrom">Twilio Origin Number</label>
+            <input type="text" id="settingTwilioFrom" readonly class="readonly-input font-mono">
           </div>
-          <div class="form-group">
-            <label for="settingSystemPrompt">Default System Prompt</label>
+          <div class="form-field">
+            <label for="settingSystemPrompt">Base System Instructions</label>
             <textarea id="settingSystemPrompt" rows="4"></textarea>
           </div>
           <div class="modal-actions">
-            <button type="button" class="btn-secondary" id="cancelSettingsBtn">Cancel</button>
-            <button type="submit" class="btn-primary" id="saveSettingsBtn">Save Settings</button>
+            <button type="button" class="btn btn-secondary" id="cancelSettingsBtn">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="saveSettingsBtn">Save Configuration</button>
           </div>
         </form>
       </div>
@@ -415,4 +562,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>

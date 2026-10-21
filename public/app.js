@@ -13,6 +13,83 @@ const state = {
 
 // Preset prompts
 const PROMPT_PRESETS = {
+  doctor: `# AI CALLING AGENT PROMPT — DIYA | CAREER PLAN B
+
+## 1. ROLE AND IDENTITY
+Your name is Diya. You are a female calling assistant representing Career Plan B, a career counselling company.
+You are calling doctors who are preparing for or going through the NEET PG counselling process.
+Your purpose is to:
+- Confirm whether you are speaking with a doctor.
+- Inform them that the NEET PG counselling toolkit has been sent via WhatsApp.
+- Check whether they received it and answer basic questions about the toolkit.
+- Offer an optional, free session with a human expert counsellor.
+- If they are interested, collect a convenient callback date and time.
+You are NOT a human counsellor. Never pretend to be one.
+
+## 2. CRITICAL CONVERSATION RULES
+- NEVER say, ask for, or invent the doctor's name.
+- NEVER address the doctor by a personal name, even if one is available in the contact details or conversation context.
+- Always use respectful forms of address such as “Doctor” or “Doctor ji.”
+- Start with: “Hello, kya meri baat Doctor se ho rahi hai?”
+- Speak naturally, politely, and conversationally.
+- Use Hinglish by default. Mirror the doctor's language: English if they speak English, Hindi if they speak Hindi, and Hinglish if they mix both.
+- Keep responses short, ideally one or two sentences at a time.
+- Ask one question at a time and pause for the doctor's response.
+- Never deliver the entire script in one uninterrupted speech.
+- Do not sound like a salesperson or aggressively pursue a booking.
+- Never invent information or make promises.
+- Do not discuss MBBS, undergraduate admissions, or other courses unless the doctor asks. If asked, explain that an expert counsellor can address their query.
+- Never end the call abruptly or hang up on the doctor's behalf. Close politely and allow the conversation to conclude naturally.
+
+## 3. COMPANY BACKGROUND
+Career Plan B provides career and admission counselling across different educational pathways.
+This call is strictly about NEET PG counselling guidance.
+Mention the company's 17 years of experience and guidance provided to lakhs of students ONLY if the doctor asks about the company or its credibility.
+Do not use these credentials as an unsolicited sales pitch.
+
+## 4. CALL FLOW
+### STEP 1: IDENTITY CONFIRMATION
+Start with this exact line: “Hello, kya meri baat Doctor se ho rahi hai?”
+Do not say the doctor's name.
+If the person confirms: “Ji Doctor, main Career Plan B se Diya bol rahi hoon.” Then proceed naturally.
+If the person says you have called the wrong number: “Okay ji, sorry for the inconvenience. Thank you.”
+If the intended person is unavailable: “Koi baat nahi ji. Aap bata sakte hain, kis time callback karna convenient rahega?”
+If they do not want a callback, acknowledge their preference politely.
+
+### STEP 2: IF THE DOCTOR IS BUSY
+Say: “Bilkul Doctor, main samajh sakti hoon. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai. Aap jab convenient ho tab dekh lijiye. Thank you for your time, Doctor.”
+
+### STEP 3: EXPLAIN THE REASON FOR THE CALL
+Say: “Doctor, maine aapko NEET PG counselling process ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.”
+- If received: “Achha ji, great Doctor. Hope aapke liye useful rahegi. Kya toolkit ko lekar koi basic question hai?”
+- If not received: “Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.”
+- If not opened: “Koi baat nahi Doctor, aap apne convenient time par dekh lijiye.”
+
+### STEP 4: EXPLAIN THE TOOLKIT IF ASKED
+Approved features: MD/MS True Cost Calculator, Seat Predictor, Bond Explorer, Hospital Bed Indicator.
+If asked details: “Iske detailed use ke baare mein hamare expert counsellor aapko explain kar payenge, Doctor.”
+
+### STEP 5: OPTIONAL FREE EXPERT SESSION
+Say: “Doctor, agar aapko useful lage, toh aap hamare expert counsellor ke saath ek free counselling session bhi schedule kar sakte hain. Aap apne NEET PG counselling se related questions discuss kar sakte hain. Iski koi obligation nahi hai.”
+
+### STEP 6: RESPOND TO THE DOCTOR'S ANSWER
+- If interested: “Bilkul Doctor. Aapke liye kaunsi date aur time convenient rahega?” ... “Thank you, Doctor. Kya isi number par aapko callback karna convenient rahega?” ... “Perfect Doctor, main aapka preferred slot note kar leti hoon. Hamari team se expert counsellor aapko us time par contact karenge. Thank you, Doctor.”
+- If declines: “Bilkul Doctor, koi baat nahi. Aap toolkit apne convenient time par dekh lijiye. Thank you for your time.”
+- If unsure: “Bilkul Doctor, aap pehle toolkit dekh lijiye. Free session optional hai, aur koi obligation nahi hai.”
+- Beyond scope: “Doctor, iske baare mein hamare expert counsellor aapko detail mein guide kar payenge.”
+- About Career Plan B: “Doctor, Career Plan B ek career counselling company hai. Humein 17 years ka experience hai aur humne lakhs of students ko guide kiya hai.”
+- Paid plans: “Doctor, hamare different counselling plans available hain. Aap Career Plan B ki website par Plans and Pricing section mein details check kar sakte hain.”
+- If rude: “Sorry Doctor, agar aapko inconvenience hui. Thank you for your time.”
+
+## 5. STRICT PROHIBITIONS
+1. Say doctor's name. 2. Give college/branch/state recommendations. 3. Quote cutoffs/ranks. 4. Guarantee admission. 5. Create pressure. 6. Repeat declined offer. 7. Make false promises. 8. Pretend to be human counsellor. 9. End abruptly.
+
+## 6. NATURAL SPEAKING STYLE
+Keep replies 1-2 short sentences. Wait for the doctor's response.
+
+## 7. FINAL OPENING REMINDER
+Every call must begin with: “Hello, kya meri baat Doctor se ho rahi hai?”`,
+
   casual: `You are a warm, casual, and friendly AI calling a friend on the phone.
 Rules for conversation:
 1. Speak in a natural, casual, and conversational tone with short replies (1-2 sentences max).
@@ -43,7 +120,7 @@ Rules for conversation:
 3. If the friend speaks in Hindi, Hinglish, Punjabi, or English, reply naturally in the same language.
 4. Keep the conversation engaging by asking a simple question back.
 Be courteous, professional, concise, and confirm whether they have 10 minutes free later today.`,
-  
+
   custom: ``
 };
 
@@ -60,6 +137,7 @@ const inputFriendNumber = document.getElementById('inputFriendNumber');
 const selectLanguage = document.getElementById('selectLanguage');
 const selectSpeaker = document.getElementById('selectSpeaker');
 const selectPromptPreset = document.getElementById('selectPromptPreset');
+const inputGreeting = document.getElementById('inputGreeting');
 const customPromptGroup = document.getElementById('customPromptGroup');
 const inputCustomPrompt = document.getElementById('inputCustomPrompt');
 const metaCallSid = document.getElementById('metaCallSid');
@@ -162,6 +240,9 @@ function handleServerEvent(event) {
         if (event.config.sarvamTtsSpeaker) {
           selectSpeaker.value = event.config.sarvamTtsSpeaker;
         }
+        if (event.config.greeting && inputGreeting) {
+          inputGreeting.value = event.config.greeting;
+        }
       }
       if (event.activeCall && event.activeCall.status !== 'idle' && event.activeCall.status !== 'completed') {
         updateCallState(event.activeCall);
@@ -246,6 +327,14 @@ function stopCallTimer() {
 // REAL-TIME TRANSCRIPT RENDERING
 // ===================================================================
 
+// SVG Icons for clean UI
+const SVG_ICONS = {
+  assistant: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>`,
+  user: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`,
+  play: `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`,
+  speaker: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`
+};
+
 function renderTurn(turn) {
   if (emptyTranscriptState) {
     emptyTranscriptState.style.display = 'none';
@@ -259,18 +348,18 @@ function renderTurn(turn) {
 
   let footerHtml = `<span class="turn-time">${timeStr}</span>`;
   if (isAssistant && turn.totalMs > 0) {
-    footerHtml += `<span class="latency-pill">⚡ ${turn.totalMs}ms</span>`;
+    footerHtml += `<span class="latency-pill font-mono">${turn.totalMs}ms</span>`;
   }
   if (isAssistant && turn.audioUrl) {
     footerHtml += `
       <button class="btn-play-audio" onclick="playAudio('${turn.audioUrl}', this)">
-        <span>▶</span> Replay Voice
+        ${SVG_ICONS.play} <span>Replay Audio</span>
       </button>
     `;
   }
 
   turnEl.innerHTML = `
-    <div class="turn-avatar">${isAssistant ? '🤖' : '👤'}</div>
+    <div class="turn-avatar">${isAssistant ? SVG_ICONS.assistant : SVG_ICONS.user}</div>
     <div class="turn-bubble">
       <div class="turn-text">${escapeHtml(turn.text)}</div>
       <div class="turn-footer">${footerHtml}</div>
@@ -280,22 +369,22 @@ function renderTurn(turn) {
   transcriptContainer.appendChild(turnEl);
   transcriptContainer.scrollTop = transcriptContainer.scrollHeight;
 
-  // Animate wave bar
+  // Animate wave equalizer
   audioWaveBar.classList.add('speaking');
-  waveSpeakerLabel.textContent = isAssistant ? 'Sarvam AI Speaking...' : 'Friend Speaking...';
+  waveSpeakerLabel.textContent = isAssistant ? 'Voice AI Speaking' : 'Caller Speaking';
   setTimeout(() => {
     audioWaveBar.classList.remove('speaking');
     waveSpeakerLabel.textContent = 'Voice Activity';
   }, 3500);
 }
 
-window.playAudio = function(url, btn) {
+window.playAudio = function (url, btn) {
   const audio = new Audio(url);
-  const oldText = btn.innerHTML;
-  btn.innerHTML = '<span>🔊</span> Playing...';
+  const oldHtml = btn.innerHTML;
+  btn.innerHTML = `${SVG_ICONS.speaker} <span>Playing...</span>`;
   audio.play().catch(e => console.error('Audio play error:', e));
   audio.onended = () => {
-    btn.innerHTML = oldText;
+    btn.innerHTML = oldHtml;
   };
 };
 
@@ -306,7 +395,7 @@ function escapeHtml(str) {
 }
 
 // ===================================================================
-// LATENCY SPEEDOMETER & WATERFALL METER
+// LATENCY TELEMETRY & WATERFALL METER
 // ===================================================================
 
 function updateLatencyMeter(stats) {
@@ -314,7 +403,7 @@ function updateLatencyMeter(stats) {
   const chat = stats.latestChatMs || 0;
   const tts = stats.latestTtsMs || 0;
 
-  // Number animation
+  // Numbers
   currentLatencyNumber.textContent = total;
   breakdownChatMs.textContent = `${chat} ms`;
   breakdownTtsMs.textContent = `${tts} ms`;
@@ -325,8 +414,8 @@ function updateLatencyMeter(stats) {
   barChat.style.width = `${Math.min(100, (chat / maxScale) * 100)}%`;
   barTts.style.width = `${Math.min(100, (tts / maxScale) * 100)}%`;
 
-  // Speedometer Gauge Path (Circumference ~ 251.2)
-  const totalCircumference = 251.2;
+  // Speedometer Gauge Arc (Stroke Dasharray: 235.6)
+  const totalCircumference = 235.6;
   const percentage = Math.min(1, Math.max(0, total / 2000));
   const offset = totalCircumference * (1 - percentage);
   gaugePath.style.strokeDashoffset = offset;
@@ -334,20 +423,22 @@ function updateLatencyMeter(stats) {
   // Color rating
   if (total <= 800) {
     gaugePath.style.stroke = '#10b981'; // Emerald
-    latencyRatingText.textContent = '⚡ Ultra-Low Latency (Sub-Second)';
+    latencyRatingText.textContent = 'Optimal Latency (Sub-Second)';
     latencyRatingText.style.color = '#34d399';
-    subsecondBadge.textContent = '⚡ Sub-Second Achieved!';
+    subsecondBadge.textContent = 'Target Met: <800ms';
     subsecondBadge.style.color = '#34d399';
   } else if (total <= 1200) {
-    gaugePath.style.stroke = '#06b6d4'; // Cyan
-    latencyRatingText.textContent = '🚀 Fast Telephonic Response';
+    gaugePath.style.stroke = '#38bdf8'; // Sky
+    latencyRatingText.textContent = 'Nominal Telephonic Speed (~1s)';
     latencyRatingText.style.color = '#38bdf8';
-    subsecondBadge.textContent = 'Fast (~1s)';
+    subsecondBadge.textContent = 'Nominal (~1s)';
     subsecondBadge.style.color = '#38bdf8';
   } else {
     gaugePath.style.stroke = '#f59e0b'; // Amber
-    latencyRatingText.textContent = 'Normal Voice Response';
+    latencyRatingText.textContent = 'Standard Turn Response';
     latencyRatingText.style.color = '#fbbf24';
+    subsecondBadge.textContent = 'High (>1.2s)';
+    subsecondBadge.style.color = '#fbbf24';
   }
 
   // Session Averages
@@ -406,7 +497,7 @@ function renderHistoryList() {
       </div>
       <div class="history-meta">
         <span>${dateStr}</span>
-        <span class="font-mono text-emerald">⚡ ${call.avgLatencyMs || 700}ms avg</span>
+        <span class="font-mono" style="color: var(--accent-success);">${call.avgLatencyMs || 700}ms avg</span>
       </div>
     `;
 
@@ -438,18 +529,18 @@ function selectHistoryCall(id) {
     const timeStr = turn.timestamp ? new Date(turn.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '';
     let footer = `<span class="turn-time">${timeStr}</span>`;
     if (isAssistant && turn.totalMs > 0) {
-      footer += `<span class="latency-pill">⚡ ${turn.totalMs}ms</span>`;
+      footer += `<span class="latency-pill font-mono">${turn.totalMs}ms</span>`;
     }
     if (isAssistant && turn.audioUrl) {
       footer += `
         <button class="btn-play-audio" onclick="playAudio('${turn.audioUrl}', this)">
-          <span>▶</span> Replay Voice
+          ${SVG_ICONS.play} <span>Replay Audio</span>
         </button>
       `;
     }
 
     turnEl.innerHTML = `
-      <div class="turn-avatar">${isAssistant ? '🤖' : '👤'}</div>
+      <div class="turn-avatar">${isAssistant ? SVG_ICONS.assistant : SVG_ICONS.user}</div>
       <div class="turn-bubble">
         <div class="turn-text">${escapeHtml(turn.text)}</div>
         <div class="turn-footer">${footer}</div>
@@ -506,7 +597,12 @@ dialerForm.onsubmit = async (e) => {
   const customPrompt = presetKey === 'custom' ? inputCustomPrompt.value : PROMPT_PRESETS[presetKey];
 
   startCallBtn.disabled = true;
-  startCallBtn.innerHTML = '<span>⏳</span> Dialing...';
+  startCallBtn.innerHTML = `
+    <svg class="spin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+    </svg>
+    <span class="btn-text">Dialing...</span>
+  `;
 
   try {
     const res = await fetch('/api/call', {
@@ -516,6 +612,7 @@ dialerForm.onsubmit = async (e) => {
         friendNumber,
         language,
         speaker,
+        greeting: inputGreeting ? inputGreeting.value.trim() : "Hello, kya meri baat Doctor se ho rahi hai?",
         systemPrompt: customPrompt
       })
     });
@@ -528,21 +625,37 @@ dialerForm.onsubmit = async (e) => {
     alert(`Dial error: ${err.message}`);
   } finally {
     startCallBtn.disabled = false;
-    startCallBtn.innerHTML = '<span class="btn-icon">📞</span><span class="btn-text">Dial Outbound Call</span>';
+    startCallBtn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span class="btn-text">Initiate Call</span>
+    `;
   }
 };
 
 // Hang up
 hangupCallBtn.onclick = async () => {
   hangupCallBtn.disabled = true;
-  hangupCallBtn.innerHTML = '<span>⏳</span> Ending...';
+  hangupCallBtn.innerHTML = `
+    <svg class="spin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+    </svg>
+    <span class="btn-text">Disconnecting...</span>
+  `;
   try {
     await fetch('/api/hangup', { method: 'POST' });
   } catch (err) {
     console.error('Hangup error:', err);
   } finally {
     hangupCallBtn.disabled = false;
-    hangupCallBtn.innerHTML = '<span class="btn-icon">🔴</span><span class="btn-text">Hang Up Call</span>';
+    hangupCallBtn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"></path>
+        <line x1="22" x2="2" y1="2" y2="22"></line>
+      </svg>
+      <span class="btn-text">Disconnect Call</span>
+    `;
   }
 };
 
