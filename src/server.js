@@ -116,143 +116,81 @@ let currentGreeting = "Hello, kya meri baat Doctor se ho rahi hai?";
 
 let currentSystemPrompt = `# AI CALLING AGENT PROMPT — DIYA | CAREER PLAN B
 
-## 1. ROLE AND IDENTITY
-Your name is Diya. You are a female calling assistant representing Career Plan B, a career counselling company.
-You are calling doctors who are preparing for or going through the NEET PG counselling process.
-Your purpose is to:
-- Confirm whether you are speaking with a doctor.
-- Inform them that the NEET PG counselling toolkit has been sent via WhatsApp.
-- Check whether they received it and answer basic questions about the toolkit.
-- Offer an optional, free session with a human expert counsellor.
-- If they are interested, collect a convenient callback date and time.
-You are NOT a human counsellor. Never pretend to be one.
+## ROLE
+Your name is Diya. You are a female calling representative for Career Plan B, a career counselling company. You are calling doctors who are preparing for or going through the NEET PG counselling process.
+The purpose of the call is a friendly follow-up: let them know a NEET PG counselling toolkit has been sent to them on WhatsApp, and offer a free session with a human expert counsellor if they would find it useful.
+You are NOT a counsellor yourself. You do not give advice on branch or college choices, ranks, cutoffs, or fees. You only share the toolkit information, handle basic questions, and book a callback slot if they want one.
 
-## 2. CRITICAL CONVERSATION RULES
-- NEVER say, ask for, or invent the doctor's name.
-- NEVER address the doctor by a personal name, even if one is available in the contact details or conversation context.
-- Always use respectful forms of address such as “Doctor” or “Doctor ji.”
-- Start with: “Hello, kya meri baat Doctor se ho rahi hai?”
-- Speak naturally, politely, and conversationally.
-- Use Hinglish by default. Mirror the doctor's language: English if they speak English, Hindi if they speak Hindi, and Hinglish if they mix both.
-- Keep responses short, ideally one or two sentences at a time.
-- Ask one question at a time and pause for the doctor's response.
-- Never deliver the entire script in one uninterrupted speech.
-- Do not sound like a salesperson or aggressively pursue a booking.
-- Never invent information or make promises.
-- Do not discuss MBBS, undergraduate admissions, or other courses unless the doctor asks. If asked, explain that an expert counsellor can address their query.
-- Never end the call abruptly or hang up on the doctor's behalf. Close politely and allow the conversation to conclude naturally.
+## ABOUT CAREER PLAN B
+We are a career counselling company providing guidance across admission processes (NEET PG, engineering, MBA, etc.).
+- 17 years of experience, guided lakhs of students with unbiased guidance.
+- Mention credentials ONLY if the caller asks who you are or questions credibility, never in the opening.
+- We have various counselling plans detailed on our website careerplanb.co on the plans and pricing page.
 
-## 3. COMPANY BACKGROUND
-Career Plan B provides career and admission counselling across different educational pathways.
-This call is strictly about NEET PG counselling guidance.
-Mention the company's 17 years of experience and guidance provided to lakhs of students ONLY if the doctor asks about the company or its credibility.
-Do not use these credentials as an unsolicited sales pitch.
+## FOCUS
+This call is strictly about NEET PG counselling guidance. The WhatsApp toolkit is the main point. The free session is an option, not a target. Do not discuss MBBS, UG counselling, or other courses. If asked, state that an expert counsellor can discuss it.
 
-## 4. CALL FLOW
+## LANGUAGE & STYLE
+- Default to a natural Hindi-English mix (Hinglish). Doctors prefer English for medical and professional terms.
+- Mirror the caller's language: Hindi for Hindi, English for English, Hinglish for a mix.
+- Keep sentences short, conversational, and respectful (10 to 18 words per turn). This is a phone call, not a written email.
+- Address respectfully as “Doctor” or “Dr. [Name]” with natural respect using “aap” and “ji”.
+- Avoid repeating “Doctor” or “Doctor ji” in every consecutive sentence; sound like a warm, polished colleague.
 
-### STEP 1: IDENTITY CONFIRMATION
-Start with this exact line:
-“Hello, kya meri baat Doctor se ho rahi hai?”
-Do not say the doctor's name.
-If the person confirms:
-“Ji Doctor, main Career Plan B se Diya bol rahi hoon.”
-Then proceed naturally.
-If the person says you have called the wrong number:
-“Okay ji, sorry for the inconvenience. Thank you.”
-If the intended person is unavailable:
-“Koi baat nahi ji. Aap bata sakte hain, kis time callback karna convenient rahega?”
-If they do not want a callback, acknowledge their preference politely.
+## CALL FLOW
+### 1. Identity Confirmation
+Opening: “Hello, kya meri baat Doctor se ho rahi hai?”
+- If wrong person / unavailable: Politely ask when to call back, or end courteously.
+- If confirmed: Proceed to Introduction.
 
-### STEP 2: IF THE DOCTOR IS BUSY
-Say:
-“Bilkul Doctor, main samajh sakti hoon. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai. Aap jab convenient ho tab dekh lijiye. Thank you for your time, Doctor.”
-If the doctor suggests a callback time, acknowledge it and confirm the requested time.
-Do not continue the sales conversation when the doctor is busy.
+### 2. Introduction
+Say: “Main Career Plan B se Diya bol rahi hoon.”
+- If busy: Offer a callback time and close politely: “Maine aapko NEET PG toolkit bhej diya hai WhatsApp pe, thank you for your time.”
 
-### STEP 3: EXPLAIN THE REASON FOR THE CALL
-Say:
-“Doctor, maine aapko NEET PG counselling process ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.”
-Pause and listen.
+### 3. Toolkit Mention (Main Reason for Call)
+Say: “Maine aapko NEET PG counselling process ka ek toolkit WhatsApp pe bheja hai, bas yeh confirm karna tha ki aapko mil gaya ya nahi.”
+- If received / seen: “Great, hope it’s useful.” Ask lightly if they have any basic questions about it.
+- If not received: Apologise briefly, note that it will be resent, and tell them: “Aap hamari website careerplanb.co se bhi toolkit access kar sakte hain.”
+- If haven't looked yet: “Koi baat nahi, jab time ho tab dekh lijiye.”
+- Let them respond naturally before moving on. Do not rush.
 
-#### If the doctor received the toolkit:
-“Achha ji, great Doctor. Hope aapke liye useful rahegi. Kya toolkit ko lekar koi basic question hai?”
-Let the doctor respond before proceeding.
+### 4. Soft Offer
+Say: “Agar aap chahein, toh hamare expert counsellor ke saath ek free counselling session schedule kar sakte hain, jahan aapko aapke admission ke branch-wise options se judey sawaal clear ho jayenge.”
+- Suggest it casually, not as an aggressive sales pitch. Do not repeat the offer more than once unprompted.
 
-#### If the doctor has not received it:
-“Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.”
-Do not claim the toolkit has been resent unless the resend has actually been completed.
+### 5. Handling Responses
+- A. YES / Interested:
+  Thank them warmly. Ask for a convenient date and time, and confirm the best number.
+  Close: “Perfect, main slot note kar leti hoon. Hamare expert counsellor aapko us time pe call karenge. Thank you, Doctor.”
+- B. NOT INTERESTED / Asks to be removed:
+  Try to persuade gently once: “Yeh session bilkul free aur unbiased hai, jahan aapko branch-wise options par complete clarity mil jayegi.”
+  If still not convinced after persuading, end politely with proper closing: “Koi baat nahi ji, thank you so much for your time.”
+- C. QUESTIONS:
+  Answer only using approved talking points below. For detailed queries or branch advice:
+  “Iske baare mein hamare expert counsellor detail mein bata payenge.” (Do not repeat this more than 2 times in a single call).
+- D. UNSURE / Wants to think:
+  Don't pressure. “Bilkul, aap toolkit dekh lijiye. Session free hai aur koi obligation nahi hai.” If still unsure, leave it with them politely.
 
-#### If the doctor has received it but has not opened it:
-“Koi baat nahi Doctor, aap apne convenient time par dekh lijiye.”
-Do not pressure them to read it immediately.
+## APPROVED TALKING POINTS (Use only these)
+- Toolkit contents and USPs: MD/MS true cost calculator, Seat predictor, Bond explorer, Hospital bed indicator.
+- The first session with an expert counsellor is completely free, with zero obligation.
+- Career Plan B has 17 years of experience and has guided lakhs of students with unbiased counselling (mention only if asked).
+- Different counselling plans are available on careerplanb.co plans and pricing page.
 
-### STEP 4: EXPLAIN THE TOOLKIT IF ASKED
-The toolkit provides information and tools related to NEET PG counselling, including:
-- MD/MS True Cost Calculator
-- Seat Predictor
-- Bond Explorer
-- Hospital Bed Indicator
-Explain only these approved features and their general purpose. Do not invent exact calculations, predictions, data coverage, or guarantees.
-Example:
-“Doctor, is toolkit mein counselling process ko samajhne ke liye kuch useful tools hain, jaise MD/MS True Cost Calculator, Seat Predictor, Bond Explorer aur Hospital Bed Indicator.”
-If asked how these tools work in detail, say:
-“Iske detailed use ke baare mein hamare expert counsellor aapko explain kar payenge, Doctor.”
+## STRICT BOUNDARIES
+- NEVER cut or hang up the call from your end in any case.
+- Never give advice on which college, branch, or state to choose.
+- Never quote ranks, cutoffs, fees, seat counts, counselling dates, or success guarantees.
+- Never claim outcomes (“aapko seat mil jayegi”). Only offer guidance.
+- Never create urgency or pressure (“seats khatam ho rahi hain”, “last date nikal jayegi”).
+- Never pressure someone who says no; close politely.
+- If the caller is rude or hostile, remain calm, polite, and never argue.
 
-### STEP 5: OPTIONAL FREE EXPERT SESSION
-Only after the toolkit discussion, and only when appropriate, offer the session once.
-Say:
-“Doctor, agar aapko useful lage, toh aap hamare expert counsellor ke saath ek free counselling session bhi schedule kar sakte hain. Aap apne NEET PG counselling se related questions discuss kar sakte hain. Iski koi obligation nahi hai.”
-Do not repeat the offer if the doctor declines.
-Do not imply that the session guarantees admission or a seat.
+## TONE
+Calm, respectful, peer-to-peer, like a helpful colleague checking in, not a salesperson. Use natural acknowledgments (“haan ji,” “bilkul,” “samajh sakti hoon,” “of course”).
 
-### STEP 6: RESPOND TO THE DOCTOR'S ANSWER
-#### A. If the doctor is interested:
-Say:
-“Bilkul Doctor. Aapke liye kaunsi date aur time convenient rahega?”
-After they provide a date and time, confirm:
-“Thank you, Doctor. Kya isi number par aapko callback karna convenient rahega?”
-After confirmation, say:
-“Perfect Doctor, main aapka preferred slot note kar leti hoon. Hamari team se expert counsellor aapko us time par contact karenge. Thank you, Doctor.”
-#### B. If the doctor declines:
-Say:
-“Bilkul Doctor, koi baat nahi. Aap toolkit apne convenient time par dekh lijiye. Thank you for your time.”
-#### C. If the doctor is unsure:
-Say:
-“Bilkul Doctor, aap pehle toolkit dekh lijiye. Free session optional hai, aur koi obligation nahi hai.”
-#### D. If the doctor asks questions beyond your role:
-Say:
-“Doctor, iske baare mein hamare expert counsellor aapko detail mein guide kar payenge.”
-#### E. If the doctor asks about Career Plan B:
-Say:
-“Doctor, Career Plan B ek career counselling company hai. Humein 17 years ka experience hai aur humne lakhs of students ko guide kiya hai. Hamari guidance unbiased hoti hai.”
-#### F. If the doctor asks about paid plans:
-Say:
-“Doctor, hamare different counselling plans available hain. Aap Career Plan B ki website par Plans and Pricing section mein details check kar sakte hain.”
-#### G. If the doctor is rude or irritated:
-Say:
-“Sorry Doctor, agar aapko inconvenience hui. Thank you for your time.”
-
-## 5. STRICT PROHIBITIONS
-You must NEVER:
-1. Say the doctor's name or ask them to state their name.
-2. Give college, branch, or state recommendations.
-3. Quote ranks, cutoffs, fees, seat counts, or counselling dates.
-4. Guarantee admission or claim a doctor will get a seat.
-5. Create urgency or pressure.
-6. Repeat a declined offer or try to persuade someone who has said no.
-7. Claim that a message was sent, resent, or a callback booked unless the relevant action actually occurred.
-8. Pretend to be a human expert counsellor.
-9. Discuss unrelated admission processes unless the doctor asks.
-10. End the call abruptly or behave rudely.
-
-## 6. NATURAL SPEAKING STYLE
-Use short, natural phrases such as: “Ji Doctor.”, “Bilkul.”, “Samajh sakti hoon.”, “Koi baat nahi.”, “Of course, Doctor.”
-Keep replies 1-2 short sentences. Wait for the doctor's response after each question.
-
-## 7. FINAL OPENING REMINDER
-Every call must begin with:
-“Hello, kya meri baat Doctor se ho rahi hai?”
-Never insert or speak any personal name in this opening or anywhere else in the call.`;
+## GOAL
+Confirm the toolkit reached them and book a free counsellor session slot if they want one, or conclude courteously if they don't.`;
 
 // Poller reference for active call status checking
 let activePoller = null;
@@ -337,21 +275,52 @@ function startCallStatusPoller(callSid) {
   }, 2000);
 }
 
+// Map friendly speaker names to fast bulbul:v4-flash personas
+function resolveTtsSpeaker(speaker, model = config.sarvamTtsModel) {
+  if (!speaker) return model === "bulbul:v4-flash" ? "simran_hi_conversation" : "ishita";
+  if (speaker.includes("_")) return speaker;
+
+  if (model === "bulbul:v4-flash") {
+    const v4Map = {
+      ishita: "simran_hi_conversation",
+      simran: "simran_hi_conversation",
+      sanchita: "sanchita_hi_assistant",
+      kavya: "kavya_hi_conversational",
+      ritu: "ritu_hi_conversation",
+      priya: "simran_hi_conversation",
+      neha: "simran_enhi_customer",
+      shreya: "shreya_hi_conversational",
+      shubh: "shubh_enhi_ads",
+      aditya: "aditya_hi_conversational",
+    };
+    return v4Map[speaker.toLowerCase()] || "simran_hi_conversation";
+  }
+
+  return speaker;
+}
+
 // Helper: Synthesize speech with Sarvam Bulbul TTS and cache audio buffer
 async function synthesizeSpeech(text, languageCode = config.sarvamTtsLanguage, speaker = config.sarvamTtsSpeaker) {
   const t0 = Date.now();
   let cleanText = (text || "").trim();
-  // Sarvam TTS rejects inputs > 500 characters
-  if (cleanText.length > 450) {
-    cleanText = cleanText.substring(0, 450);
+  // Keep telephony audio concise (< 250 characters) for ultra-fast generation
+  if (cleanText.length > 250) {
+    cleanText = cleanText.substring(0, 250);
   }
   if (!cleanText) cleanText = "Hello, kya meri baat Doctor se ho rahi hai?";
+
+  const ttsModel = config.sarvamTtsModel || "bulbul:v4-flash";
+  const resolvedSpeaker = resolveTtsSpeaker(speaker, ttsModel);
+  const pace = config.sarvamTtsPace || 1.05;
 
   try {
     const res = await sarvam.textToSpeech.convert({
       inputs: [cleanText],
       target_language_code: languageCode,
-      speaker: speaker,
+      speaker: resolvedSpeaker,
+      speech_sample_rate: 8000,
+      pace: pace,
+      model: ttsModel,
     });
 
     const ttsMs = Date.now() - t0;
@@ -366,7 +335,7 @@ async function synthesizeSpeech(text, languageCode = config.sarvamTtsLanguage, s
       return { audioId, ttsMs };
     }
   } catch (err) {
-    console.error("[Sarvam TTS Error]:", err.message);
+    console.error(`[Sarvam TTS Error (${ttsModel}/${resolvedSpeaker})]:`, err.message);
   }
   return { audioId: null, ttsMs: Date.now() - t0 };
 }
@@ -424,6 +393,8 @@ app.post("/api/call", async (req, res) => {
   if (systemPrompt && systemPrompt.trim()) currentSystemPrompt = systemPrompt.trim();
   if (greeting && greeting.trim() && greeting.trim().length <= 200) {
     currentGreeting = greeting.trim();
+  } else if (friendName && friendName.trim() && friendName.trim() !== "Friend") {
+    currentGreeting = `Hello, kya meri baat Dr. ${friendName.trim()} se ho rahi hai?`;
   } else {
     currentGreeting = "Hello, kya meri baat Doctor se ho rahi hai?";
   }
@@ -589,8 +560,9 @@ app.all("/twiml", async (req, res) => {
     input: "speech",
     action: `${config.publicBaseUrl}/voice/respond`,
     method: "POST",
-    speechTimeout: "auto",
-    timeout: 10,
+    speechTimeout: 1.5,
+    speechModel: "phone_call",
+    timeout: 8,
     language: config.sarvamTtsLanguage,
   });
 
@@ -617,12 +589,16 @@ app.all("/voice/silence", async (req, res) => {
 
   const twiml = new twilio.twiml.VoiceResponse();
 
-  if (count <= 3) {
-    let promptMsg = "Hey, are you still there?";
+  if (count <= 5) {
+    let promptMsg = "Hello? Kya meri aawaz aa rahi hai?";
     if (count === 2) {
-      promptMsg = "I'm still here, take your time!";
+      promptMsg = "Haanji, main yahi hoon, kya aap sun pa rahe hain?";
     } else if (count === 3) {
-      promptMsg = "Hello? I can't hear you clearly, are you there?";
+      promptMsg = "Hello? Aapki aawaz nahi aa rahi, kya aap sun pa rahe hain?";
+    } else if (count === 4) {
+      promptMsg = "Agar meri aawaz aa rahi hai toh boliye, main sun rahi hoon.";
+    } else if (count === 5) {
+      promptMsg = "Hello? Kya aap line par hain?";
     }
 
     const { audioId } = await synthesizeSpeech(promptMsg, config.sarvamTtsLanguage, config.sarvamTtsSpeaker);
@@ -631,8 +607,9 @@ app.all("/voice/silence", async (req, res) => {
       input: "speech",
       action: `${config.publicBaseUrl}/voice/respond`,
       method: "POST",
-      speechTimeout: "auto",
-      timeout: 10,
+      speechTimeout: 1.5,
+      speechModel: "phone_call",
+      timeout: 8,
       language: config.sarvamTtsLanguage,
     });
 
@@ -647,24 +624,28 @@ app.all("/voice/silence", async (req, res) => {
     return res.type("text/xml").send(twiml.toString());
   }
 
-  // Only disconnect after 4 consecutive long silences (>45s of total silence)
-  const farewellText = "Looks like you might be away. I'll catch you later, take care!";
-  const { audioId } = await synthesizeSpeech(farewellText, config.sarvamTtsLanguage, config.sarvamTtsSpeaker);
-  if (audioId) {
-    twiml.play(`${config.publicBaseUrl}/audio/${audioId}.wav`);
-  } else {
-    twiml.say({ voice: "Polly.Aditi", language: "en-IN" }, farewellText);
-  }
-  twiml.hangup();
+  // Never hang up automatically: continue listening politely
+  const keepAliveMsg = "Haanji, main yahi hoon, aap sun pa rahe hain?";
+  const gather = twiml.gather({
+    input: "speech",
+    action: `${config.publicBaseUrl}/voice/respond`,
+    method: "POST",
+    speechTimeout: 1.5,
+    speechModel: "phone_call",
+    timeout: 8,
+    language: config.sarvamTtsLanguage,
+  });
+  gather.say({ voice: "Polly.Aditi", language: "en-IN" }, keepAliveMsg);
+  twiml.redirect({ method: "POST" }, `${config.publicBaseUrl}/voice/silence`);
   res.type("text/xml").send(twiml.toString());
 });
 
 // Webhook: Twilio posts what your friend said
-// Phase 1: Respond IMMEDIATELY to avoid Twilio's 15s timeout.
-// Kick off the slow AI work in background, then redirect Twilio to /voice/process
-// which will serve the result once it's ready (polling with short pauses).
+// Responds IMMEDIATELY with natural conversational filler audio to keep the line active,
+// while AI reasoning and TTS audio synthesize in parallel in the background.
+// This guarantees zero carrier silence disconnects and keeps the call 100% connected.
 app.all("/voice/respond", async (req, res) => {
-  const callSid = req.body?.CallSid || req.query?.CallSid || "unknown";
+  const callSid = req.body?.CallSid || req.query?.CallSid || currentActiveCall.callSid || "unknown";
   const userSpeech = req.body?.SpeechResult || req.query?.SpeechResult;
   console.log(`\n🗣️ [Friend Spoke - ${callSid}]: "${userSpeech || "(no speech detected)"}"`);
 
@@ -686,98 +667,66 @@ app.all("/voice/respond", async (req, res) => {
   currentActiveCall.turns.push(userTurn);
   broadcast("transcript_turn", { callSid, turn: userTurn });
 
-  // 2. Fire AI work in background (non-blocking) — do NOT await here
-  (async () => {
-    let history = activeConversations.get(callSid) || [
-      { role: "system", content: currentSystemPrompt },
+  // 2. AI Reasoning & Bulbul Audio Generation (Direct, no robotic fillers!)
+  let history = activeConversations.get(callSid) || [
+    { role: "system", content: currentSystemPrompt },
+  ];
+  history.push({ role: "user", content: userSpeech });
+
+  // Count user turns to determine if Turn 1 or subsequent turn
+  const userTurnCount = history.filter(m => m.role === "user").length;
+
+  // Two-Tier Prompting: Turn 1 uses full prompt, Turn 2+ uses compressed active context
+  let messagesToSend;
+  if (userTurnCount <= 1) {
+    const turn1Prompt = `${currentSystemPrompt}\n\n## STRICT CONVERSATION RULES\n- DO NOT repeatedly say "Doctor" or "Doctor ji". Speak like a polite, warm human using "aap" / "ji".\n- Respond in 10 to 18 words maximum (1-2 short sentences).`;
+    messagesToSend = [
+      { role: "system", content: turn1Prompt },
+      ...history.filter(m => m.role !== "system")
     ];
-    history.push({ role: "user", content: userSpeech });
-
-    let replyText = "I am listening, please go ahead!";
-    let chatMs = 0;
-    try {
-      console.log(`[Sarvam Chat] Sending message to ${config.sarvamChatModel}...`);
-      const chatT0 = Date.now();
-      const completion = await sarvam.chat.completions({
-        model: config.sarvamChatModel,
-        messages: history,
-      });
-      chatMs = Date.now() - chatT0;
-
-      replyText = completion.choices?.[0]?.message?.content || replyText;
-      console.log(`[Sarvam AI Reply (${chatMs}ms)]: "${replyText}"`);
-      history.push({ role: "assistant", content: replyText });
-      activeConversations.set(callSid, history);
-    } catch (err) {
-      console.error("[Sarvam Chat Error]:", err.message);
-    }
-
-    console.log(`[Sarvam TTS] Generating audio for reply...`);
-    const { audioId: replyAudioId, ttsMs } = await synthesizeSpeech(replyText, config.sarvamTtsLanguage, config.sarvamTtsSpeaker);
-
-    const totalTurnMs = chatMs + ttsMs;
-    console.log(`⚡ [LATENCY METRIC] Chat: ${chatMs}ms | TTS: ${ttsMs}ms | Turn Total: ${totalTurnMs}ms`);
-
-    // Store result for Phase 2
-    pendingReplies.set(callSid, { replyText, replyAudioId, chatMs, ttsMs, totalTurnMs });
-
-    // Auto-clean after 2 minutes to avoid memory leak
-    setTimeout(() => pendingReplies.delete(callSid), 2 * 60 * 1000);
-  })();
-
-  // 3. Respond to Twilio IMMEDIATELY with a short pause + redirect to /voice/process
-  // This prevents the "context canceled" timeout error.
-  const twiml = new twilio.twiml.VoiceResponse();
-  // Play a brief natural-sounding pause ("hmm", "let me think")
-  twiml.pause({ length: 1 });
-  twiml.redirect({ method: "POST" }, `${config.publicBaseUrl}/voice/process?callSid=${callSid}&attempt=1`);
-  res.type("text/xml").send(twiml.toString());
-});
-
-// Phase 2: Serve the AI reply once background processing is done.
-// Twilio polls this endpoint (via redirect) until the reply is ready.
-app.all("/voice/process", async (req, res) => {
-  const callSid = req.body?.CallSid || req.query?.CallSid || req.query?.callSid || "unknown";
-  const attempt = parseInt(req.query?.attempt || "1", 10);
-  const MAX_WAIT_ATTEMPTS = 8; // 8 x ~1.5s = ~12s max wait before fallback
-
-  const pending = pendingReplies.get(callSid);
-
-  if (!pending) {
-    if (attempt >= MAX_WAIT_ATTEMPTS) {
-      // Timeout fallback — tell Twilio to keep listening
-      console.warn(`[voice/process] Timeout waiting for AI reply for ${callSid}, using fallback`);
-      const fallbackText = "Hmm, let me think for a second...";
-      const { audioId: fbAudio } = await synthesizeSpeech(fallbackText, config.sarvamTtsLanguage, config.sarvamTtsSpeaker);
-      const twiml = new twilio.twiml.VoiceResponse();
-      const gather = twiml.gather({
-        input: "speech",
-        action: `${config.publicBaseUrl}/voice/respond`,
-        method: "POST",
-        speechTimeout: "auto",
-        timeout: 10,
-        language: config.sarvamTtsLanguage,
-      });
-      if (fbAudio) {
-        gather.play(`${config.publicBaseUrl}/audio/${fbAudio}.wav`);
-      } else {
-        gather.say({ voice: "Polly.Aditi", language: "en-IN" }, fallbackText);
-      }
-      twiml.redirect({ method: "POST" }, `${config.publicBaseUrl}/voice/silence`);
-      return res.type("text/xml").send(twiml.toString());
-    }
-
-    // Not ready yet — pause briefly and retry
-    console.log(`[voice/process] Reply not ready yet for ${callSid} (attempt ${attempt}), polling...`);
-    const twiml = new twilio.twiml.VoiceResponse();
-    twiml.pause({ length: 1 });
-    twiml.redirect({ method: "POST" }, `${config.publicBaseUrl}/voice/process?callSid=${callSid}&attempt=${attempt + 1}`);
-    return res.type("text/xml").send(twiml.toString());
+  } else {
+    const compressedPrompt = `ROLE: Diya, female caller for Career Plan B speaking to a doctor in Hinglish.
+GOAL: Confirm NEET PG WhatsApp toolkit reached them, answer basic toolkit questions, and offer an optional free session with an expert counsellor.
+CONVERSATION RULES:
+- Tone: Calm, respectful, peer-to-peer, not a salesperson. Keep responses short (10-18 words, max 1-2 short sentences).
+- Address naturally with "aap" / "ji", avoid robotic repetition of "Doctor" in every turn.
+- If not interested: Persuade gently once (session is free, covers branch-wise options). If still not convinced, end politely with closing line: "Koi baat nahi ji, thank you so much for your time."
+- Toolkit USPs: MD/MS true cost calculator, Seat predictor, Bond explorer, Hospital bed indicator. Website: careerplanb.co.
+- Outside your scope / branch advice: "Iske baare mein hamare expert counsellor detail mein bata payenge" (max 2 times per call).
+- NEVER cut or hang up the call from your end. Never quote ranks, fees, or guarantee admission.`;
+    // Sliding window: keep only the last 4 turns (2 user, 2 assistant) to prevent token bloat
+    const recentHistory = history.filter(m => m.role !== "system").slice(-4);
+    messagesToSend = [
+      { role: "system", content: compressedPrompt },
+      ...recentHistory
+    ];
   }
 
-  // Reply is ready — consume it and respond
-  pendingReplies.delete(callSid);
-  const { replyText, replyAudioId, chatMs, ttsMs, totalTurnMs } = pending;
+  let replyText = "Ji, main sun rahi hoon, boliye.";
+  let chatMs = 0;
+  try {
+    console.log(`[Sarvam Chat] Sending message to ${config.sarvamChatModel} (Turn #${userTurnCount}, ${messagesToSend.length} context items)...`);
+    const chatT0 = Date.now();
+    const completion = await sarvam.chat.completions({
+      model: config.sarvamChatModel,
+      messages: messagesToSend,
+      temperature: 0.45,
+    });
+    chatMs = Date.now() - chatT0;
+
+    replyText = completion.choices?.[0]?.message?.content || replyText;
+    console.log(`[Sarvam AI Reply (${chatMs}ms)]: "${replyText}"`);
+    history.push({ role: "assistant", content: replyText });
+    activeConversations.set(callSid, history);
+  } catch (err) {
+    console.error("[Sarvam Chat Error]:", err.message);
+  }
+
+  console.log(`[Sarvam TTS] Generating audio for reply...`);
+  const { audioId: replyAudioId, ttsMs } = await synthesizeSpeech(replyText, config.sarvamTtsLanguage, config.sarvamTtsSpeaker);
+
+  const totalTurnMs = chatMs + ttsMs;
+  console.log(`⚡ [LATENCY METRIC] Chat: ${chatMs}ms | TTS: ${ttsMs}ms | Turn Total: ${totalTurnMs}ms`);
 
   // Update latency stats
   currentActiveCall.latencyStats.latestChatMs = chatMs;
@@ -801,13 +750,15 @@ app.all("/voice/process", async (req, res) => {
     latencyStats: currentActiveCall.latencyStats
   });
 
+  // 3. Directly stream synthesized AI audio inside <Gather> (No robotic fillers!)
   const twiml = new twilio.twiml.VoiceResponse();
   const gather = twiml.gather({
     input: "speech",
     action: `${config.publicBaseUrl}/voice/respond`,
     method: "POST",
-    speechTimeout: "auto",
-    timeout: 10,
+    speechTimeout: 1.5,
+    speechModel: "phone_call",
+    timeout: 8,
     language: config.sarvamTtsLanguage,
   });
 
@@ -817,6 +768,13 @@ app.all("/voice/process", async (req, res) => {
     gather.say({ voice: "Polly.Aditi", language: "en-IN" }, replyText);
   }
 
+  twiml.redirect({ method: "POST" }, `${config.publicBaseUrl}/voice/silence`);
+  res.type("text/xml").send(twiml.toString());
+});
+
+// Endpoint: Legacy fallback redirect for /voice/process
+app.all("/voice/process", (_req, res) => {
+  const twiml = new twilio.twiml.VoiceResponse();
   twiml.redirect({ method: "POST" }, `${config.publicBaseUrl}/voice/silence`);
   res.type("text/xml").send(twiml.toString());
 });
@@ -834,6 +792,18 @@ app.post("/call-status", (req, res) => {
   }
 
   res.sendStatus(204);
+});
+
+server.on("error", (err) => {
+  if (err.code === "EADDRINUSE") {
+    console.error(`\n❌ [PORT CONFLICT] Port ${config.port} is already in use by another program!`);
+    console.error(`👉 Run this in PowerShell to free it:`);
+    console.error(`   Get-NetTCPConnection -LocalPort ${config.port} -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }`);
+    console.error(`👉 Or change PORT in .env (e.g. PORT=${config.port + 1})\n`);
+    process.exit(1);
+  } else {
+    console.error("Server error:", err);
+  }
 });
 
 server.listen(config.port, () => {

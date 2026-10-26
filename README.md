@@ -30,6 +30,8 @@ Equipped with a modern web UI dashboard for dialing, live conversation streaming
 
 ## 🏗️ Architecture & How It Works
 
+### High-Level System Architecture
+
 ```
                         ┌────────────────────────────────────────────────────────┐
                         │             Sarvam Voice Studio (Node.js)              │
@@ -55,6 +57,94 @@ Equipped with a modern web UI dashboard for dialing, live conversation streaming
 └──────────────┘        │   └────────────────────────────────────────────────┘   │
                         └────────────────────────────────────────────────────────┘
 ```
+
+### ⚡ Turn-by-Turn Telephony Execution Pipeline
+
+```text
+[ Caller Speaks into Phone Handset ]
+                 │
+                 ▼
+1. SPEECH-TO-TEXT (STT)  ────► Twilio Voice <Gather> (phone_call neural model)
+                 │             Converts telephone audio into a text string
+                 ▼
+2. AI REASONING (LLM)    ────► Sarvam AI: sarvam-105b-conversations (105B model)
+                 │             Evaluates intent, handles Hindi/English/Hinglish, crafts reply
+                 ▼
+3. TEXT-TO-SPEECH (TTS)  ────► Sarvam AI: bulbul:v3 (Voices: "shubh" or "simran")
+                 │             Synthesizes natural Indian-accented voice at 8000 Hz WAV
+                 ▼
+[ AI Voice Plays Back Over Telephone ]
+```
+
+---
+
+## 🖥️ What is in the Web Studio Dashboard (Website UI)
+
+The web dashboard (`public/index.html`) provides a real-time command center organized into three specialized views:
+
+### 1. 🎙️ Live Console (`#studioView`)
+* **Outbound Dialer Panel**:
+  * **Recipient Number**: E.164 phone input (e.g. `+919465802410`).
+  * **Language Selector**: Direct selection for 8 Indian languages (`English [en-IN]`, `Hindi [hi-IN]`, `Punjabi [pa-IN]`, `Bengali [bn-IN]`, `Tamil [ta-IN]`, `Telugu [te-IN]`, `Marathi [mr-IN]`, `Gujarati [gu-IN]`).
+  * **Voice Persona**: Instant switching between Bulbul speaker profiles (`Shubh`, `Simran`, `Ishita`, `Aditya`, `Priya`).
+  * **Scenario Presets**: One-click prompt configurations:
+    * *Diya | Career Plan B (Doctor NEET PG)* (Default medical counseling scenario)
+    * *Casual Catch-up & Friendly Greeting*
+    * *Dinner / Weekend Hangout Plan*
+    * *Surprise Birthday Wishes*
+    * *Personal Assistant Sync*
+    * *Custom System Instructions* (with customizable initial greeting and system prompt)
+  * **Call Controls**: One-click **"Initiate Call"** and **"Disconnect Call"** buttons.
+* **Telephony Metadata Strip**:
+  * Displays active **Call SID**, **Caller ID** (Twilio number), and live **Active Duration Timer** (`MM:SS`).
+* **Live Audio Stream Viewport**:
+  * Real-time conversation bubbles distinguishing user speech from AI responses.
+  * Inline **"▶ Replay Voice"** audio controls to replay generated assistant speech turns.
+  * Animated **Voice Activity Equalizer** bars indicating speech detection.
+  * **Toolbar**: Clear conversation window and single-click **"Export TXT"** download.
+* **Real-Time Turn Latency Telemetry**:
+  * **SVG Speedometer Gauge**: Real-time visual dial measuring roundtrip latency in milliseconds with dynamic color-coded rings (Optimal `< 800ms`, Sub-second `< 1200ms`, Elevated).
+  * **Waterfall Latency Breakdown**: Comparative progress bars breaking down:
+    * `Sarvam-105B Inference (Avg)` (ms)
+    * `Bulbul Voice Synthesis (Avg)` (ms)
+    * `Total Turn Latency` (ms)
+  * **Session Statistics**: Live counter for **Average Latency** and **Processed Turns**.
+
+---
+
+### 2. 📜 Call Transcripts (`#historyView`)
+* **Recorded Sessions Sidebar**:
+  * Chronological list of past calls saved in `data/transcripts.json`.
+  * Shows status badges (`completed`, `in-progress`, `busy`, `no-answer`), call duration, turn count, and timestamp.
+* **Interactive Transcript Viewer**:
+  * Full multi-turn dialog history with caller and assistant dialogue bubbles.
+  * Individual latency telemetry metadata on each turn (`Chat: X ms | TTS: Y ms | Total: Z ms`).
+  * Audio replay player embedded for every generated assistant turn.
+* **Session Management**:
+  * **Export TXT**: Clean, readable text transcript with timestamps.
+  * **Export JSON**: Complete structured JSON transcript including per-turn latencies.
+  * **Delete Session**: Removes the call record from persistent storage.
+
+---
+
+### 3. 📊 Telemetry & Architecture (`#analyticsView`)
+* **Platform Efficiency & Benchmarks**:
+  * **Peak Low Turn Latency**: `~640 ms`
+  * **Sarvam-105B Inference (Avg)**: `~450 ms`
+  * **Bulbul TTS Synthesis (Avg)**: `~250 ms`
+  * **Twilio Webhook SLA Compliance**: `100%`
+* **Telephony Pipeline Architecture Flow**:
+  * **01 Indian Phoneme ASR**: Twilio phone_call neural / Saaras speech recognition handling mixed Hinglish, idioms, and accents over PSTN telephony.
+  * **02 Sarvam-105B Reasoning**: High-speed reasoning model tailored for natural turn-taking, concise response length, and conversational pacing.
+  * **03 Bulbul v4 / v3 Synthesis**: High-fidelity Indian voice synthesis streaming natural speech in ~200–250ms without robotic artifacts.
+
+---
+
+### ⚙️ Settings Modal (`#settingsModal`)
+* In-browser runtime configuration dialog allowing dynamic updates to:
+  * Twilio Account SID, Auth Token, Twilio Number, and Destination Number.
+  * Sarvam AI API Key, Chat Model, TTS Language, and Speaker Voice.
+  * Public Tunnel Base URL (`cloudflared` or `ngrok`).
 
 ---
 

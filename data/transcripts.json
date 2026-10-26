@@ -1,5 +1,1429 @@
 [
   {
+    "id": "CAa5e73335aca180a65ff2d64dd260327e",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-26T11:57:12.804Z",
+    "endedAt": "2026-10-26T11:59:43.624Z",
+    "durationSec": 141,
+    "language": "hi-IN",
+    "speaker": "simran_hi_conversation",
+    "avgLatencyMs": 1702,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-26T11:57:21.718Z",
+        "chatMs": 0,
+        "ttsMs": 934,
+        "totalMs": 934,
+        "audioUrl": "/audio/f0dec7de-05aa-4d00-bcaf-34e3cc7cff52.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-26T11:57:32.274Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai, bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-26T11:57:34.937Z",
+        "chatMs": 416,
+        "ttsMs": 2236,
+        "totalMs": 2652,
+        "audioUrl": "/audio/307f50f7-8efa-4574-a723-43cfef1bd0b6.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-26T11:57:51.122Z"
+      },
+      {
+        "role": "assistant",
+        "text": "कोई बात नहीं Doctor, main abhi aapko dobara bhej deti hoon. Kya aap callback chahenge free counselor se?",
+        "timestamp": "2026-10-26T11:57:52.872Z",
+        "chatMs": 327,
+        "ttsMs": 1420,
+        "totalMs": 1747,
+        "audioUrl": "/audio/26824ce7-d74c-43bf-82f0-b08e023ec319.wav"
+      },
+      {
+        "role": "user",
+        "text": "हेलो फ्री पॉर्न स्टार मतलब!",
+        "timestamp": "2026-10-26T11:58:19.514Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, shayad koi misunderstanding ho gayi. Main free counselor callback ki baat kar rahi thi. Kya main woh arrange kar doon?",
+        "timestamp": "2026-10-26T11:58:21.804Z",
+        "chatMs": 323,
+        "ttsMs": 1965,
+        "totalMs": 2288,
+        "audioUrl": "/audio/ec9df4e6-0493-4daf-9ffc-2a20810c1ea4.wav"
+      },
+      {
+        "role": "user",
+        "text": "की कॉल बैक किया है।",
+        "timestamp": "2026-10-26T11:58:37.802Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Bilkul Doctor, main abhi arrange kar deti hoon. Kya aap apna number share kar denge?",
+        "timestamp": "2026-10-26T11:58:39.257Z",
+        "chatMs": 268,
+        "ttsMs": 1184,
+        "totalMs": 1452,
+        "audioUrl": "/audio/cb50b667-544e-4ff4-be99-286969da96a2.wav"
+      },
+      {
+        "role": "user",
+        "text": "इसी नंबर पर कॉल कर लेना।",
+        "timestamp": "2026-10-26T11:58:55.438Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Theek hai Doctor, main isi number par callback schedule kar deti hoon. Aur koi help chahiye?",
+        "timestamp": "2026-10-26T11:58:57.057Z",
+        "chatMs": 318,
+        "ttsMs": 1298,
+        "totalMs": 1616,
+        "audioUrl": "/audio/94e127d2-0721-4ec6-be4a-82b360cfe0de.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं बस भाई!",
+        "timestamp": "2026-10-26T11:59:09.230Z"
+      },
+      {
+        "role": "assistant",
+        "text": "ठीक है Doctor, take care!",
+        "timestamp": "2026-10-26T11:59:10.206Z",
+        "chatMs": 234,
+        "ttsMs": 741,
+        "totalMs": 975,
+        "audioUrl": "/audio/8c8932a3-cf21-444d-8035-d6981d8a9ff6.wav"
+      },
+      {
+        "role": "user",
+        "text": "और स्टोर किट में था क्या?",
+        "timestamp": "2026-10-26T11:59:18.846Z"
+      },
+      {
+        "role": "assistant",
+        "text": "जी Doctor, NEET PG WhatsApp toolkit usi store mein tha. Kya aapko mil gaya?",
+        "timestamp": "2026-10-26T11:59:20.653Z",
+        "chatMs": 334,
+        "ttsMs": 1471,
+        "totalMs": 1805,
+        "audioUrl": "/audio/c94a7b1f-7afb-41af-b759-20af73f8e7dd.wav"
+      },
+      {
+        "role": "user",
+        "text": "क्या स्कूल कितने?",
+        "timestamp": "2026-10-26T11:59:33.023Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, exact number toh mujhe abhi nahi pata. Kya main aapko free counselor callback arrange kar doon?",
+        "timestamp": "2026-10-26T11:59:34.873Z",
+        "chatMs": 416,
+        "ttsMs": 1433,
+        "totalMs": 1849,
+        "audioUrl": "/audio/96f56104-044c-4d3e-8f67-3a2e610d93d6.wav"
+      }
+    ]
+  },
+  {
+    "id": "CAa8e31d6dbf56ee3a1eb6a41524a3e498",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-26T11:43:38.847Z",
+    "endedAt": "2026-10-26T11:45:07.030Z",
+    "durationSec": 79,
+    "language": "hi-IN",
+    "speaker": "sanchita_hi_assistant",
+    "avgLatencyMs": 1305,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-26T11:43:47.210Z",
+        "chatMs": 0,
+        "ttsMs": 806,
+        "totalMs": 806,
+        "audioUrl": "/audio/19de673a-6ed3-4381-9552-5e4e577a0c11.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-26T11:43:57.341Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon.",
+        "timestamp": "2026-10-26T11:43:58.765Z",
+        "chatMs": 406,
+        "ttsMs": 1016,
+        "totalMs": 1422,
+        "audioUrl": "/audio/b0aecb27-7321-4583-8d3f-de6ebd0c6afb.wav"
+      },
+      {
+        "role": "user",
+        "text": "बोलिए!",
+        "timestamp": "2026-10-26T11:44:15.149Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor ji, kya aapko NEET PG counselling toolkit WhatsApp par mili?",
+        "timestamp": "2026-10-26T11:44:16.558Z",
+        "chatMs": 200,
+        "ttsMs": 1206,
+        "totalMs": 1406,
+        "audioUrl": "/audio/1a81c31c-9ca6-4f68-87b9-8cdd4b839def.wav"
+      },
+      {
+        "role": "user",
+        "text": "कौन से टोल गेट में नहीं मिली?",
+        "timestamp": "2026-10-26T11:44:29.315Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor ji, yeh toolkit aapko WhatsApp par bheji gayi thi. Kya aapne check ki?",
+        "timestamp": "2026-10-26T11:44:30.811Z",
+        "chatMs": 287,
+        "ttsMs": 1208,
+        "totalMs": 1495,
+        "audioUrl": "/audio/52bbc60f-b69e-4add-b3c1-5044035c20bf.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिला मेरे को।",
+        "timestamp": "2026-10-26T11:44:44.251Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor ji, kya main aapko abhi call back karwa doon?",
+        "timestamp": "2026-10-26T11:44:45.397Z",
+        "chatMs": 287,
+        "ttsMs": 856,
+        "totalMs": 1143,
+        "audioUrl": "/audio/0166b1bc-51cc-4ba4-a09d-c92f960fccd5.wav"
+      },
+      {
+        "role": "user",
+        "text": "किस चीज का?",
+        "timestamp": "2026-10-26T11:44:57.458Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor ji, NEET PG counselling session ke baare mein baat karni thi. Kya aap free hain?",
+        "timestamp": "2026-10-26T11:44:59.014Z",
+        "chatMs": 326,
+        "ttsMs": 1230,
+        "totalMs": 1556,
+        "audioUrl": "/audio/445831ec-5cc8-400e-a2b4-3a30383ea153.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA25271129400a73a3026a0bc131eeb094",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-26T11:37:11.821Z",
+    "endedAt": "2026-10-26T11:38:38.308Z",
+    "durationSec": 76,
+    "language": "hi-IN",
+    "speaker": "sanchita_hi_assistant",
+    "avgLatencyMs": 1593,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-26T11:37:22.649Z",
+        "chatMs": 0,
+        "ttsMs": 938,
+        "totalMs": 938,
+        "audioUrl": "/audio/f58a9664-ebd9-47cb-add6-8b4359d2a14b.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-26T11:37:32.019Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai. Aapko mil gayi ya nahi, bas confirm karna tha.",
+        "timestamp": "2026-10-26T11:37:34.386Z",
+        "chatMs": 372,
+        "ttsMs": 1988,
+        "totalMs": 2360,
+        "audioUrl": "/audio/a906be97-bfb2-4b21-ae58-a82d28f426f5.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-26T11:37:47.993Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Theek hai Doctor, main abhi dobara bhej deti hoon. Kya aap baat karne ke लिए free हैं?",
+        "timestamp": "2026-10-26T11:37:49.395Z",
+        "chatMs": 284,
+        "ttsMs": 1117,
+        "totalMs": 1401,
+        "audioUrl": "/audio/814fad21-06b6-4336-8962-5409fdceacb5.wav"
+      },
+      {
+        "role": "user",
+        "text": "हां फ्री हूं!",
+        "timestamp": "2026-10-26T11:38:02.256Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Bahut badhiya Doctor ji, aap mujhe apna aasan callback slot bata dijiye.",
+        "timestamp": "2026-10-26T11:38:03.579Z",
+        "chatMs": 279,
+        "ttsMs": 1041,
+        "totalMs": 1320,
+        "audioUrl": "/audio/28f6cc77-c768-4747-b2f3-7600f853406d.wav"
+      },
+      {
+        "role": "user",
+        "text": "और बैक स्टॉल किस बात का?",
+        "timestamp": "2026-10-26T11:38:15.487Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor ji, back slot isliye maang rahi hoon taaki hum NEET PG counselling par aaram se baat kar sakein.",
+        "timestamp": "2026-10-26T11:38:17.318Z",
+        "chatMs": 422,
+        "ttsMs": 1409,
+        "totalMs": 1831,
+        "audioUrl": "/audio/f0fd59a9-dd28-43fd-9876-190f4f0854a2.wav"
+      },
+      {
+        "role": "user",
+        "text": "बात कर सके किस बारे में बात कर सके?",
+        "timestamp": "2026-10-26T11:38:30.653Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor ji, WhatsApp par bheje gaye NEET PG counselling toolkit ke baare mein baat karni thi.",
+        "timestamp": "2026-10-26T11:38:32.364Z",
+        "chatMs": 380,
+        "ttsMs": 1330,
+        "totalMs": 1710,
+        "audioUrl": "/audio/a5e79d45-4dde-4fb4-9406-ed2ebb0766c5.wav"
+      }
+    ]
+  },
+  {
+    "id": "CAc26e3fedea302f666307c1c715241def",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-26T11:21:15.953Z",
+    "endedAt": "2026-10-26T11:22:38.687Z",
+    "durationSec": 71,
+    "language": "hi-IN",
+    "speaker": "sanchita_hi_assistant",
+    "avgLatencyMs": 1792,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-26T11:21:26.959Z",
+        "chatMs": 0,
+        "ttsMs": 907,
+        "totalMs": 907,
+        "audioUrl": "/audio/61726661-63b5-4ed3-90b6-b19624311a38.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां आप!",
+        "timestamp": "2026-10-26T11:21:36.431Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai, bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-26T11:21:38.840Z",
+        "chatMs": 301,
+        "ttsMs": 2103,
+        "totalMs": 2404,
+        "audioUrl": "/audio/a1d31fc7-ccab-4023-aa72-fb16981b8915.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-26T11:21:52.904Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, main abhi dobara bhej deti hoon. Kya main aapko counselor session ke liye callback kar lu?",
+        "timestamp": "2026-10-26T11:21:54.619Z",
+        "chatMs": 321,
+        "ttsMs": 1392,
+        "totalMs": 1713,
+        "audioUrl": "/audio/ec6abb74-663c-4f47-b211-d507854d9e89.wav"
+      },
+      {
+        "role": "user",
+        "text": "वह क्या है?",
+        "timestamp": "2026-10-26T11:22:07.422Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, yeh ek free session hai jahan counselor aapki counselling mein poori madad karenge. Kya main aapke liye callback slot book kar doon?",
+        "timestamp": "2026-10-26T11:22:09.611Z",
+        "chatMs": 295,
+        "ttsMs": 1892,
+        "totalMs": 2187,
+        "audioUrl": "/audio/5bf4bf85-ec09-4ff8-92e7-8b69df9e2edd.wav"
+      },
+      {
+        "role": "user",
+        "text": "प्रीफेक्ट ऐसे तो कुछ होता नहीं है। वह दूसरे नाम का होता है।",
+        "timestamp": "2026-10-26T11:22:26.742Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, shayad koi confusion ho gaya hai. Kya main aapko counselor se baat karne ke liye callback kar lu?",
+        "timestamp": "2026-10-26T11:22:28.494Z",
+        "chatMs": 393,
+        "ttsMs": 1356,
+        "totalMs": 1749,
+        "audioUrl": "/audio/b15c1b83-f523-4852-8d64-112a60ef0958.wav"
+      }
+    ]
+  },
+  {
+    "id": "unknown",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-26T11:15:57.603Z",
+    "endedAt": "2026-10-26T11:20:41.157Z",
+    "durationSec": 0,
+    "language": "hi-IN",
+    "speaker": "sanchita_hi_assistant",
+    "avgLatencyMs": 1249,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-26T11:15:58.854Z",
+        "chatMs": 0,
+        "ttsMs": 1249,
+        "totalMs": 1249,
+        "audioUrl": "/audio/34021342-761b-45bf-a540-9071ae050904.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA76eb04faffc91d58478f29b0ff057302",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-26T09:21:03.671Z",
+    "endedAt": "2026-10-26T09:22:29.939Z",
+    "durationSec": 57,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 2873,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-26T09:21:32.711Z",
+        "chatMs": 0,
+        "ttsMs": 1347,
+        "totalMs": 1347,
+        "audioUrl": "/audio/a5ce55ca-6043-4806-b319-5b75a090810b.wav"
+      },
+      {
+        "role": "user",
+        "text": "आप कौन?",
+        "timestamp": "2026-10-26T09:21:44.912Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon.",
+        "timestamp": "2026-10-26T09:21:46.751Z",
+        "chatMs": 712,
+        "ttsMs": 1124,
+        "totalMs": 1836,
+        "audioUrl": "/audio/c5ea2a85-42a5-45f3-b4f9-c2b02d9f0fcc.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां बोलिए!",
+        "timestamp": "2026-10-26T09:21:57.168Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, maine aapko NEET PG counselling process ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-26T09:21:59.785Z",
+        "chatMs": 334,
+        "ttsMs": 2279,
+        "totalMs": 2613,
+        "audioUrl": "/audio/fecc4ac7-7024-47a2-adf4-5a8f46ab8586.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-26T09:22:13.351Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.",
+        "timestamp": "2026-10-26T09:22:19.050Z",
+        "chatMs": 2901,
+        "ttsMs": 2794,
+        "totalMs": 5695,
+        "audioUrl": "/audio/9a812075-c62a-4589-94c7-fe3a696b4e37.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA7a59f93fdd7fa41ddc5c754a7c384f1d",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T13:01:38.365Z",
+    "endedAt": "2026-10-22T13:02:34.314Z",
+    "durationSec": 45,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 408,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T13:01:48.232Z",
+        "chatMs": 0,
+        "ttsMs": 487,
+        "totalMs": 487,
+        "audioUrl": null
+      },
+      {
+        "role": "user",
+        "text": "हेलो!",
+        "timestamp": "2026-10-22T13:02:02.389Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main sun rahi hoon, boliye.",
+        "timestamp": "2026-10-22T13:02:03.175Z",
+        "chatMs": 0,
+        "ttsMs": 411,
+        "totalMs": 411,
+        "audioUrl": null
+      },
+      {
+        "role": "user",
+        "text": "कहां से बोल रहे हैं आप किस बात करनी है आपको?",
+        "timestamp": "2026-10-22T13:02:18.278Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main sun rahi hoon, boliye.",
+        "timestamp": "2026-10-22T13:02:19.044Z",
+        "chatMs": 0,
+        "ttsMs": 297,
+        "totalMs": 297,
+        "audioUrl": null
+      },
+      {
+        "role": "user",
+        "text": "खत्म!",
+        "timestamp": "2026-10-22T13:02:27.380Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main sun rahi hoon, boliye.",
+        "timestamp": "2026-10-22T13:02:28.067Z",
+        "chatMs": 0,
+        "ttsMs": 436,
+        "totalMs": 436,
+        "audioUrl": null
+      }
+    ]
+  },
+  {
+    "id": "CAe3b75b9a43992c013e7d38bd76b80dfd",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T12:47:28.868Z",
+    "endedAt": "2026-10-22T12:47:47.254Z",
+    "durationSec": 9,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 201,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T12:47:37.096Z",
+        "chatMs": 0,
+        "ttsMs": 201,
+        "totalMs": 201,
+        "audioUrl": null
+      }
+    ]
+  },
+  {
+    "id": "CA86310d96b6a6e721952f791d3cd7a67d",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T12:27:33.031Z",
+    "endedAt": "2026-10-22T12:28:42.513Z",
+    "durationSec": 62,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3542,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T12:27:40.939Z",
+        "chatMs": 0,
+        "ttsMs": 927,
+        "totalMs": 927,
+        "audioUrl": "/audio/88a9d37c-b4e1-4593-bfd0-81e61c6a97ac.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां आप!",
+        "timestamp": "2026-10-22T12:27:51.679Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T12:27:56.225Z",
+        "chatMs": 1036,
+        "ttsMs": 3508,
+        "totalMs": 4544,
+        "audioUrl": "/audio/cf634fb2-e9ce-4979-acc2-6ddeb7b3be76.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिला।",
+        "timestamp": "2026-10-22T12:28:11.557Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.",
+        "timestamp": "2026-10-22T12:28:16.110Z",
+        "chatMs": 567,
+        "ttsMs": 3985,
+        "totalMs": 4552,
+        "audioUrl": "/audio/9b9cfd16-7a80-4b24-9898-46af4fc4f300.wav"
+      },
+      {
+        "role": "user",
+        "text": "ताकि आपके टूल किट में।",
+        "timestamp": "2026-10-22T12:28:29.509Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, bilkul. Aap bataiye, toolkit mein kya jaanna chahenge?",
+        "timestamp": "2026-10-22T12:28:33.655Z",
+        "chatMs": 1445,
+        "ttsMs": 2700,
+        "totalMs": 4145,
+        "audioUrl": "/audio/10d5360c-dd06-4e1b-9acd-e7dbb0d22dd0.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA5e2bfb4a6e597bf04154a5f057867b21",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T12:12:51.609Z",
+    "endedAt": "2026-10-22T12:14:12.072Z",
+    "durationSec": 71,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3634,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T12:13:01.240Z",
+        "chatMs": 0,
+        "ttsMs": 1759,
+        "totalMs": 1759,
+        "audioUrl": "/audio/6c42649a-99df-462f-b0c8-66b1aa0d9f0c.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T12:13:11.110Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Doctor, maine aapko NEET PG counselling process ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T12:13:17.089Z",
+        "chatMs": 429,
+        "ttsMs": 5547,
+        "totalMs": 5976,
+        "audioUrl": "/audio/136d7fec-d10c-471f-8633-d8bad00d6722.wav"
+      },
+      {
+        "role": "user",
+        "text": "अब ठीक है 2:40!",
+        "timestamp": "2026-10-22T12:13:34.029Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, mujhe theek se samajh nahi aaya. Kya aapko toolkit mil gayi hai?",
+        "timestamp": "2026-10-22T12:13:36.998Z",
+        "chatMs": 1464,
+        "ttsMs": 1504,
+        "totalMs": 2968,
+        "audioUrl": "/audio/44286cf0-0192-475d-82dc-1f06e628f460.wav"
+      },
+      {
+        "role": "user",
+        "text": "तो क?",
+        "timestamp": "2026-10-22T12:13:40.886Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, main bas yeh confirm karna chahti thi ki WhatsApp par bheji gayi toolkit aapko mil gayi ya nahi. Kya aapko receive ho gayi hai?",
+        "timestamp": "2026-10-22T12:13:43.965Z",
+        "chatMs": 441,
+        "ttsMs": 2636,
+        "totalMs": 3077,
+        "audioUrl": "/audio/d35dde6b-2c63-4621-96ec-f3f5a55a1245.wav"
+      },
+      {
+        "role": "user",
+        "text": "वाणी!",
+        "timestamp": "2026-10-22T12:13:48.452Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, shayad network issue ho raha hai. Kya aap bata sakte hain ki aapko toolkit mil gayi hai ya nahi?",
+        "timestamp": "2026-10-22T12:13:51.735Z",
+        "chatMs": 547,
+        "ttsMs": 2735,
+        "totalMs": 3282,
+        "audioUrl": "/audio/11a01208-a9ee-433f-b8b3-e53d2ccf645b.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-22T12:14:03.120Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain. Kya iske alawa koi basic question hai aapka?",
+        "timestamp": "2026-10-22T12:14:07.862Z",
+        "chatMs": 1051,
+        "ttsMs": 3689,
+        "totalMs": 4740,
+        "audioUrl": "/audio/d0f8ba5d-0262-4ca9-a141-94ab6d4d445d.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA12100a8b5c9ca3f2ca845a6f4137fbbc",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T12:06:30.320Z",
+    "endedAt": "2026-10-22T12:07:16.085Z",
+    "durationSec": 37,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3023,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T12:06:38.177Z",
+        "chatMs": 0,
+        "ttsMs": 826,
+        "totalMs": 826,
+        "audioUrl": "/audio/c514fc5c-875e-489b-b780-5d495891c75a.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T12:06:47.418Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T12:06:51.424Z",
+        "chatMs": 329,
+        "ttsMs": 3676,
+        "totalMs": 4005,
+        "audioUrl": "/audio/8d30c846-ec64-490c-a243-d37479e4c160.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-22T12:07:06.188Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.",
+        "timestamp": "2026-10-22T12:07:10.432Z",
+        "chatMs": 1970,
+        "ttsMs": 2269,
+        "totalMs": 4239,
+        "audioUrl": "/audio/552e26fa-a95d-4327-92b7-78890615ac0b.wav"
+      }
+    ]
+  },
+  {
+    "id": "CAc8f5ffa28acf920e6fdc66090062b021",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T12:03:04.330Z",
+    "endedAt": "2026-10-22T12:03:50.756Z",
+    "durationSec": 37,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3359,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T12:03:15.558Z",
+        "chatMs": 0,
+        "ttsMs": 1396,
+        "totalMs": 1396,
+        "audioUrl": "/audio/0aef868f-1ad6-4cc7-aee8-48d5e8e467a2.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T12:03:24.900Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T12:03:28.542Z",
+        "chatMs": 613,
+        "ttsMs": 3026,
+        "totalMs": 3639,
+        "audioUrl": "/audio/240ae9c8-220e-4a26-8a10-541cc243088f.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-22T12:03:42.653Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain. Koi aur dikkat toh nahi hai Doctor?",
+        "timestamp": "2026-10-22T12:03:47.696Z",
+        "chatMs": 784,
+        "ttsMs": 4257,
+        "totalMs": 5041,
+        "audioUrl": "/audio/3bd73057-9ad5-43ee-b5ec-e2bf56a84ffb.wav"
+      }
+    ]
+  },
+  {
+    "id": "CAe96dec7d104c2a0827a7638ef3a57464",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:47:57.029Z",
+    "endedAt": "2026-10-22T11:48:24.104Z",
+    "durationSec": 20,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3217,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:48:05.000Z",
+        "chatMs": 0,
+        "ttsMs": 1441,
+        "totalMs": 1441,
+        "audioUrl": "/audio/fec372dc-d302-4ca7-8075-80b688952019.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां, आप कौन?",
+        "timestamp": "2026-10-22T11:48:15.086Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai, bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:48:20.082Z",
+        "chatMs": 982,
+        "ttsMs": 4011,
+        "totalMs": 4993,
+        "audioUrl": "/audio/4ae80b7a-445c-40c8-bf88-3a114ae34dd1.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA3f3f86ec3723d35f8b677b476a3afde3",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:41:53.411Z",
+    "endedAt": "2026-10-22T11:42:23.004Z",
+    "durationSec": 22,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 4067,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:42:03.261Z",
+        "chatMs": 0,
+        "ttsMs": 3103,
+        "totalMs": 3103,
+        "audioUrl": "/audio/9633c375-e725-4996-a00d-d0353d9740bd.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां, आप कौन?",
+        "timestamp": "2026-10-22T11:42:13.240Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai, bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:42:18.276Z",
+        "chatMs": 967,
+        "ttsMs": 4064,
+        "totalMs": 5031,
+        "audioUrl": "/audio/ea7d9c15-0629-477d-8cc7-fbbb91d501c1.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA6ef836b3e4567f1bf453e5b27bad07f3",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:40:42.801Z",
+    "endedAt": "2026-10-22T11:41:45.196Z",
+    "durationSec": 56,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3538,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:40:49.745Z",
+        "chatMs": 0,
+        "ttsMs": 1165,
+        "totalMs": 1165,
+        "audioUrl": "/audio/f5c28b20-1cb0-45b6-a285-06e3e74e8d9e.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां, आप कौन?",
+        "timestamp": "2026-10-22T11:40:59.254Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:41:03.506Z",
+        "chatMs": 988,
+        "ttsMs": 3261,
+        "totalMs": 4249,
+        "audioUrl": "/audio/ba986f9f-c1d0-4671-9c02-522c93c53065.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-22T11:41:18.537Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.",
+        "timestamp": "2026-10-22T11:41:21.999Z",
+        "chatMs": 470,
+        "ttsMs": 2992,
+        "totalMs": 3462,
+        "audioUrl": "/audio/18bb270a-adf2-47db-9f97-2c8f23da43cd.wav"
+      },
+      {
+        "role": "user",
+        "text": "टूल्कित में है क्या?",
+        "timestamp": "2026-10-22T11:41:35.137Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, isme MD/MS True Cost Calculator, Seat Predictor, Bond Explorer, aur Hospital Bed Indicator jaise tools hain. Iske detailed use ke baare mein hamare expert counsellor aapko explain kar payenge, Doctor.",
+        "timestamp": "2026-10-22T11:41:40.413Z",
+        "chatMs": 995,
+        "ttsMs": 4279,
+        "totalMs": 5274,
+        "audioUrl": "/audio/ccf393f7-fb0b-443e-80bd-9b229f8e7768.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA66cd79aed804e9c6803be03d8d844ae2",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:32:11.664Z",
+    "endedAt": "2026-10-22T11:33:00.742Z",
+    "durationSec": 41,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3103,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:32:19.578Z",
+        "chatMs": 0,
+        "ttsMs": 1835,
+        "totalMs": 1835,
+        "audioUrl": "/audio/de44c7cb-94bc-492b-978d-214fcbda0b5c.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T11:32:29.344Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Doctor, maine aapko NEET PG counselling process ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:32:33.110Z",
+        "chatMs": 461,
+        "ttsMs": 3300,
+        "totalMs": 3761,
+        "audioUrl": "/audio/c35aab06-34d2-4cf3-abdf-b021cc4d30a7.wav"
+      },
+      {
+        "role": "user",
+        "text": "जैसे विकास होता है।",
+        "timestamp": "2026-10-22T11:32:36.648Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, mujhe theek se samajh nahi aaya. Kya aapko WhatsApp par toolkit mil gayi hai?",
+        "timestamp": "2026-10-22T11:32:38.217Z",
+        "chatMs": 308,
+        "ttsMs": 1254,
+        "totalMs": 1562,
+        "audioUrl": "/audio/beab68f9-3c9a-411f-8ec5-11df00471f7a.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी नहीं मिली।",
+        "timestamp": "2026-10-22T11:32:49.382Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain. Main phir se bhej doon?",
+        "timestamp": "2026-10-22T11:32:54.640Z",
+        "chatMs": 982,
+        "ttsMs": 4273,
+        "totalMs": 5255,
+        "audioUrl": "/audio/599fb17e-afe6-426f-83fc-7a93b1da1da6.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA4d70198cc9101f02b00a8a98c3d0e59a",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:29:32.627Z",
+    "endedAt": "2026-10-22T11:30:00.366Z",
+    "durationSec": 21,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3160,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:29:41.780Z",
+        "chatMs": 0,
+        "ttsMs": 1806,
+        "totalMs": 1806,
+        "audioUrl": "/audio/6429d1b9-cdbe-4ef3-aad8-133fdbe88b8d.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T11:29:52.035Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:29:56.552Z",
+        "chatMs": 987,
+        "ttsMs": 3526,
+        "totalMs": 4513,
+        "audioUrl": "/audio/3760f8c8-e2ec-41d0-9978-d26288736c0f.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA8a7089239021683e9031073e25581ada",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:17:05.056Z",
+    "endedAt": "2026-10-22T11:18:25.187Z",
+    "durationSec": 72,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3414,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:17:13.751Z",
+        "chatMs": 0,
+        "ttsMs": 1425,
+        "totalMs": 1425,
+        "audioUrl": "/audio/cd51f572-b5b2-4a26-8e91-90aa50b16865.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T11:17:23.406Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:17:26.491Z",
+        "chatMs": 425,
+        "ttsMs": 2656,
+        "totalMs": 3081,
+        "audioUrl": "/audio/38517ef1-068d-4195-b231-5a404099cd42.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-22T11:17:40.949Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.",
+        "timestamp": "2026-10-22T11:17:44.461Z",
+        "chatMs": 668,
+        "ttsMs": 2839,
+        "totalMs": 3507,
+        "audioUrl": "/audio/149c3f4b-26e8-4094-962b-124ac2fc8ff3.wav"
+      },
+      {
+        "role": "user",
+        "text": "वैसे था क्या टोल गेट में?",
+        "timestamp": "2026-10-22T11:17:58.545Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, mujhe theek se samajh nahi aaya. Kya aap bata sakte hain ki aapko message mila ya nahi? Main resend karne ka note kar leti hoon.",
+        "timestamp": "2026-10-22T11:18:01.726Z",
+        "chatMs": 825,
+        "ttsMs": 2354,
+        "totalMs": 3179,
+        "audioUrl": "/audio/44eac49e-c0f6-4d2b-8262-8ef0a35fc9ac.wav"
+      },
+      {
+        "role": "user",
+        "text": "टूल किट में क्या था?",
+        "timestamp": "2026-10-22T11:18:14.233Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, ismein MD/MS True Cost Calculator, Seat Predictor, Bond Explorer, aur Hospital Bed Indicator jaise tools hain. Iske detailed use ke baare mein hamare expert counsellor aapko explain kar payenge. Waise, kya toolkit abhi tak aapko mili? Main resend karne ka note kar leti hoon.",
+        "timestamp": "2026-10-22T11:18:20.114Z",
+        "chatMs": 646,
+        "ttsMs": 5233,
+        "totalMs": 5879,
+        "audioUrl": "/audio/ab5b478d-d1d1-4689-ac22-72cad1470cea.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA0d833f79101bc841afbd12722c42d5a7",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:15:20.118Z",
+    "endedAt": "2026-10-22T11:16:09.577Z",
+    "durationSec": 41,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3434,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:15:29.032Z",
+        "chatMs": 0,
+        "ttsMs": 2059,
+        "totalMs": 2059,
+        "audioUrl": "/audio/95748fd1-65d5-44be-a387-75257eea3866.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T11:15:40.418Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T11:15:44.460Z",
+        "chatMs": 544,
+        "ttsMs": 3497,
+        "totalMs": 4041,
+        "audioUrl": "/audio/2522f75c-a5d8-4580-9d2e-5033b1f95f03.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं मिली।",
+        "timestamp": "2026-10-22T11:15:59.133Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, ho sakta hai message miss ho gaya ho. Main isko resend karne ke liye note kar leti hoon. Aap careerplanb.co par bhi check kar sakte hain.",
+        "timestamp": "2026-10-22T11:16:03.336Z",
+        "chatMs": 1396,
+        "ttsMs": 2806,
+        "totalMs": 4202,
+        "audioUrl": "/audio/a4177b6b-a9cc-431c-87a6-056289b12438.wav"
+      }
+    ]
+  },
+  {
+    "id": "CAde801fca3bfcfe808a51763ab8b8a406",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:01:28.429Z",
+    "endedAt": "2026-10-22T11:03:02.827Z",
+    "durationSec": 88,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3745,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:01:37.653Z",
+        "chatMs": 0,
+        "ttsMs": 2065,
+        "totalMs": 2065,
+        "audioUrl": "/audio/179eaa17-a622-4159-bccf-d0bad50c565d.wav"
+      },
+      {
+        "role": "user",
+        "text": "आप कौन बोल रहे हैं?",
+        "timestamp": "2026-10-22T11:01:59.043Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:02:02.132Z",
+        "chatMs": 984,
+        "ttsMs": 2104,
+        "totalMs": 3088,
+        "audioUrl": "/audio/c6b37dc1-835f-4a80-abf4-4e35327cc169.wav"
+      },
+      {
+        "role": "user",
+        "text": "यह सब की बार डॉक्टर से हो रही है।",
+        "timestamp": "2026-10-22T11:02:33.796Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main samajh gayi. Maine aapko NEET PG counselling ki toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi?",
+        "timestamp": "2026-10-22T11:02:37.985Z",
+        "chatMs": 668,
+        "ttsMs": 3518,
+        "totalMs": 4186,
+        "audioUrl": "/audio/721afe1e-995c-4039-92f0-c4182c5b9fd2.wav"
+      },
+      {
+        "role": "user",
+        "text": "इस बारीक के टोल किट किस काम की है?",
+        "timestamp": "2026-10-22T11:02:53.176Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Doctor, is toolkit mein MD/MS True Cost Calculator, Seat Predictor, Bond Explorer, aur Hospital Bed Indicator jaise tools hain. Iske detailed use ke baare mein hamare expert counsellor aapko explain kar payenge, Doctor. Waise kya aapko yeh toolkit mil gayi hai?",
+        "timestamp": "2026-10-22T11:02:58.817Z",
+        "chatMs": 556,
+        "ttsMs": 5083,
+        "totalMs": 5639,
+        "audioUrl": "/audio/184f478d-8024-41d5-a7a6-10141457b8e7.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA97e7fa33f9fd3324483f962b1c3c9758",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T11:00:40.376Z",
+    "endedAt": "2026-10-22T11:01:16.912Z",
+    "durationSec": 23,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 1786,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T11:00:53.699Z",
+        "chatMs": 0,
+        "ttsMs": 1532,
+        "totalMs": 1532,
+        "audioUrl": "/audio/fc0bdd68-427c-4dff-b40f-193107b05518.wav"
+      },
+      {
+        "role": "user",
+        "text": "नहीं!",
+        "timestamp": "2026-10-22T11:01:09.332Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Oh, okay ji. Sorry for the inconvenience. Thank you.",
+        "timestamp": "2026-10-22T11:01:11.375Z",
+        "chatMs": 424,
+        "ttsMs": 1616,
+        "totalMs": 2040,
+        "audioUrl": "/audio/d3a0a46a-900d-49ec-9235-bb5598fbd8d5.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA98f4186262fb0736d48a2bbc4392b70a",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T10:59:26.380Z",
+    "endedAt": "2026-10-22T10:59:56.230Z",
+    "durationSec": 21,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 3815,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T10:59:36.598Z",
+        "chatMs": 0,
+        "ttsMs": 3052,
+        "totalMs": 3052,
+        "audioUrl": "/audio/8418e76c-061a-45b7-ad59-3fef3439585f.wav"
+      },
+      {
+        "role": "user",
+        "text": "जी हां!",
+        "timestamp": "2026-10-22T10:59:47.636Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Maine aapko NEET PG counselling ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T10:59:52.216Z",
+        "chatMs": 976,
+        "ttsMs": 3601,
+        "totalMs": 4577,
+        "audioUrl": "/audio/1b5eb70b-22cf-4dae-b17f-db647268b91a.wav"
+      }
+    ]
+  },
+  {
+    "id": "CA4f7e4b8989785545853b3d0397e693c2",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T10:57:03.284Z",
+    "endedAt": "2026-10-22T10:58:29.913Z",
+    "durationSec": 76,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 4195,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T10:57:15.002Z",
+        "chatMs": 0,
+        "ttsMs": 1746,
+        "totalMs": 1746,
+        "audioUrl": "/audio/7cb82131-5f5d-4d9f-8bf3-afeec4fa7004.wav"
+      },
+      {
+        "role": "user",
+        "text": "परंपरा।",
+        "timestamp": "2026-10-22T10:57:35.412Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sorry Doctor, mujhe theek se samajh nahi aaya. Kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T10:57:39.407Z",
+        "chatMs": 992,
+        "ttsMs": 3000,
+        "totalMs": 3992,
+        "audioUrl": "/audio/6a4baa54-bbbe-4ba2-b54b-cb2b9ba9193e.wav"
+      },
+      {
+        "role": "user",
+        "text": "बोल रहे हैं आप?",
+        "timestamp": "2026-10-22T10:57:43.374Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, main Career Plan B se Diya bol rahi hoon. Kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T10:57:47.451Z",
+        "chatMs": 471,
+        "ttsMs": 3606,
+        "totalMs": 4077,
+        "audioUrl": "/audio/43fe3adf-7296-4f38-b6a8-7985cdb6669e.wav"
+      },
+      {
+        "role": "user",
+        "text": "बोल रही हूं पहले आपको।",
+        "timestamp": "2026-10-22T10:57:59.853Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Ji Doctor, thank you. Maine aapko NEET PG counselling process ki ek toolkit WhatsApp par bheji hai. Bas confirm karna tha ki aapko mil gayi ya nahi.",
+        "timestamp": "2026-10-22T10:58:04.101Z",
+        "chatMs": 993,
+        "ttsMs": 3254,
+        "totalMs": 4247,
+        "audioUrl": "/audio/e7f2baea-c25a-4562-aa40-26f53e187614.wav"
+      },
+      {
+        "role": "user",
+        "text": "पता नहीं मैंने चेक नहीं किया।",
+        "timestamp": "2026-10-22T10:58:20.470Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Koi baat nahi Doctor, aap apne convenient time par dekh lijiye. Waise agar aapko useful lage, toh aap hamare expert counsellor ke saath ek free counselling session bhi schedule kar sakte hain. Iski koi obligation nahi hai. Kya aap interested hain ismein?",
+        "timestamp": "2026-10-22T10:58:27.388Z",
+        "chatMs": 999,
+        "ttsMs": 5914,
+        "totalMs": 6913,
+        "audioUrl": "/audio/4226ca33-9b72-4cc6-8649-075ce659a3de.wav"
+      }
+    ]
+  },
+  {
+    "id": "CAcdb7b38dd271bb809f3c0d7d6ac250fd",
+    "friendNumber": "+919465802410",
+    "friendName": "Friend",
+    "startedAt": "2026-10-22T10:56:43.737Z",
+    "endedAt": "2026-10-22T10:57:00.449Z",
+    "durationSec": 9,
+    "language": "hi-IN",
+    "speaker": "ishita",
+    "avgLatencyMs": 1778,
+    "turns": [
+      {
+        "role": "assistant",
+        "text": "Hello, kya meri baat Doctor se ho rahi hai?",
+        "timestamp": "2026-10-22T10:56:51.645Z",
+        "chatMs": 0,
+        "ttsMs": 1778,
+        "totalMs": 1778,
+        "audioUrl": "/audio/08eb5adf-f34e-4870-953b-7b878e4121b5.wav"
+      }
+    ]
+  },
+  {
     "id": "CAa2336901c0035a2dfdf45b8ab3951aac",
     "friendNumber": "+919465802410",
     "friendName": "Friend",
